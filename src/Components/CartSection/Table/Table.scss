@@ -1,0 +1,60 @@
+$color-font-black: #333333;
+$color-font-gray: #8f8f8f;
+
+.Table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  .table-header {
+    border-bottom: 1px solid #e7e7e7;
+    height: 50px;
+
+    th {
+      font-size: 14px;
+      font-weight: lighter;
+      color: $color-font-gray;
+    }
+  }
+
+  .checkbox {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      font-size: 0px;
+      background-image: url("./Images/CheckBox/check-off-s.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    input:hover + label {
+      background-image: url("./Images/CheckBox/check-ov-s.png");
+    }
+
+    input:checked + label {
+      background-image: url("./Images/CheckBox/check-on-s.png");
+    }
+
+    input[type="checkbox"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-appearance: checkbox;
+      -moz-appearance: checkbox;
+      appearance: checkbox;
+    }
+  }
+}
