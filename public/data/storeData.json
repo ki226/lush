@@ -1,0 +1,280 @@
+{
+  "stores": [
+    {
+      "name": "현대백화점 압구정 본점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/84021ab46d84d102"
+    },
+    {
+      "name": "롯데백화점 영등포점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/7dac9db035e57ad6"
+    },
+    {
+      "name": "롯데몰 수지점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/b8f646b294b23f47"
+    },
+    {
+      "name": "롯데백화점 인천터미널점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/2bb6d536d0f6308b"
+    },
+    {
+      "name": "현대백화점 판교점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/2a6f9c0211387c8a"
+    },
+    {
+      "name": "현대백화점 충청점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/cf3dbaf24e07e53e"
+    },
+    {
+      "name": "현대아울렛 송도점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/b7366f516fa0beea"
+    },
+    {
+      "name": "현대백화점 디큐브시티점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/9de40b44d116d637"
+    },
+    {
+      "name": "마리오몰점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/2676e65eb93c630f"
+    },
+    {
+      "name": "대학로점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/3e8bd98107213b43"
+    },
+    {
+      "name": "스타필드 고양점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/76f0d054e9a6871c"
+    },
+    {
+      "name": "스타필드 코엑스점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/8283d6016ef44ca7"
+    },
+    {
+      "name": "신세계백화점 동대구점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/d016a2743072faec"
+    },
+    {
+      "name": "롯데백화점 대구점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/482807fb1a024b9c"
+    },
+    {
+      "name": "롯데몰 진주점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/489b254bd16a091c"
+    },
+    {
+      "name": "스타필드 하남",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/637c8d87fc644f1a"
+    },
+    {
+      "name": "롯데백화점 청량리점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/aa5499cebf105940"
+    },
+    {
+      "name": "신세계백화점 김해점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/4569b53c852b423b"
+    },
+    {
+      "name": "롯데백화점 미아점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/9ce7beba792569f9"
+    },
+    {
+      "name": "AK플라자 수원점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/a022c36b6ec5376b"
+    },
+    {
+      "name": "명동역점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/9d178b1bd797bb5c"
+    },
+    {
+      "name": "롯데소공 면세점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/5629437812b7ba2a"
+    },
+    {
+      "name": "경리단길점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/881d678a273f30dd"
+    },
+    {
+      "name": "압구정 스파(spa)",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/af045d0ee5da230d"
+    },
+    {
+      "name": "롯데백화점 잠실점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/837878edf2f909af"
+    },
+    {
+      "name": "신세계백화점 경기점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/7972fd74d0605112"
+    },
+    {
+      "name": "경리단길 스파(spa)",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/bdb5cafe5605ef63"
+    },
+    {
+      "name": "롯데백화점 수원점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/68831ff3b80b5def"
+    },
+    {
+      "name": "롯데월드몰점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/ef6827a3eca57e90"
+    },
+    {
+      "name": "신세계백화점 의정부점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/08b3aab268e3f9c1"
+    },
+    {
+      "name": "이태원역점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/7a2ce32995f45bc0"
+    },
+    {
+      "name": "타임스퀘어점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/9d402bfb4c6080ec"
+    },
+    {
+      "name": "현대백화점 미아점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/c68eb080172e0e51"
+    },
+    {
+      "name": "롯데백화점 광주점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/0790d321b229b926"
+    },
+    {
+      "name": "신세계백화점 충청점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/6fa03f24a2733d20"
+    },
+    {
+      "name": "가로수길점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/ceeedbd4bb0f8a1e"
+    },
+    {
+      "name": "신세계백화점 마산점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/f4dd288e9bd92d99"
+    },
+    {
+      "name": "롯데백화점 전주점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/bfe2af6feda07223"
+    },
+    {
+      "name": "롯데백화점 창원점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/9da8c1b21fdd988a"
+    },
+    {
+      "name": "여의도IFC몰",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/5c5cce7e67cf3356"
+    },
+    {
+      "name": "롯데백화점 일산점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/c7007d75a29c1f93"
+    },
+    {
+      "name": "AK플라자 분당점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/201a0112bcbe5ce6"
+    },
+    {
+      "name": "롯데백화점 평촌점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/fdb308b58eb3149b"
+    },
+    {
+      "name": "롯데백화점 김포공항점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/f35b23254704388e"
+    },
+    {
+      "name": "롯데백화점 구리점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/76273b8f557c6760"
+    },
+    {
+      "name": "롯데백화점 대전점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/517c2243662eb0c7"
+    },
+    {
+      "name": "명동1가점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/3df82932b3a91f04"
+    },
+    {
+      "name": "롯데백화점 중동점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/8fac868e7c4b84a9"
+    },
+    {
+      "name": "현대백화점 킨텍스점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/1c9e70503a905e80"
+    },
+    {
+      "name": "현대백화점 대구점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/9dad03a87bb11290"
+    },
+    {
+      "name": "현대백화점 울산점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/69b10337206a8649"
+    },
+    {
+      "name": "강남역점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/0f3b9c49355ba3d4"
+    },
+    {
+      "name": "롯데백화점 부산본점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/04dd06fef8fafc72"
+    },
+    {
+      "name": "롯데백화점 노원점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/c4e56f124d0e00a6"
+    },
+    {
+      "name": "롯데백화점 광복점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/eb04fbb93458e160"
+    },
+    {
+      "name": "현대백화점 중동점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/cff28a1c3e27bda8"
+    },
+    {
+      "name": "신세계백화점 센텀시티점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/9b3d3a7a35196c5c"
+    },
+    {
+      "name": "신림동 포도몰점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/008e54587a026562"
+    },
+    {
+      "name": "현대백화점 목동점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/49449da79348864b"
+    },
+    {
+      "name": "롯데백화점 울산점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/516d364147cfe8fb"
+    },
+    {
+      "name": "대전 타임월드점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/439ce16de0a9a532"
+    },
+    {
+      "name": "롯데백화점 본점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/13b00dced66994b1"
+    },
+    {
+      "name": "신세계백화점 광주점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/26a41c16f946d661"
+    },
+    {
+      "name": "롯데백화점 분당점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/3c5838bf21aa9cc2"
+    },
+    {
+      "name": "홍대점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/5892202e73a3b44d"
+    },
+    {
+      "name": "신세계백화점 강남점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/18c77b727b22685a"
+    },
+    {
+      "name": "신세계백화점 본점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/7112d6bfa8353d75"
+    },
+    {
+      "name": "압구정 1호점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/96318f86bf9316b5"
+    },
+    {
+      "name": "현대백화점 신촌점",
+      "thumbnail_url": "https://lush.co.kr/data/board/upload/shop/t/eac8aa324d8697d9"
+    }
+  ]
+}
