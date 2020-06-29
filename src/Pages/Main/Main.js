@@ -1,53 +1,163 @@
 import React, { Component } from "react";
 import "./Main.scss";
 import "../../Styles/reset.scss";
-// import HeroBanner from "Components/HeroBanner";
-import Slider from "Components/Slider";
+import TopSlider from "Components/TopSlider";
+import Slider from "react-slick";
 import MainUnderContents from "Components/MainUnderContents";
 import overImage from "./Images/media_form_img.gif";
 import underImageleft from "./Images/media_form_img2.jpg";
 import underImageRight from "./Images/media_form_img3.jpg";
 import slideImage from "./Images/slide_image.jpg";
 import spaImage from "./Images/spa.gif";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Aside from "Components/Aside";
 
 class Main extends Component {
   state = {};
 
   render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      appendDots: (dots) => (
+        <div
+          style={{
+            display: "flex",
+          }}
+        >
+          <ul
+            style={{
+              width: "14px",
+              position: "absolute",
+              display: "flex",
+            }}
+          >
+            {dots}
+          </ul>
+        </div>
+      ),
+      customPaging: () => (
+        <div
+          style={{
+            position: "absolute",
+            width: "12px",
+            height: "12px",
+            color: "black",
+            border: "1.5px black solid",
+            borderRadius: "6px",
+          }}
+        ></div>
+      ),
+    };
     return (
       <div className="Main">
-        <Slider />
+        <TopSlider />
         <div className="middle-slide">
           <div className="middle-slide-form">
             <h1 className="middle-slide-title">나만 알고 싶은 향기</h1>
             <div className="all-slide-list">
-              <div className="product-form">
-                <img className="product-img" src={slideImage}></img>
-                <div className="slide-info">
-                  <p className="product-name">sample</p>
-                  <p className="hash-tag">sample</p>
-                  <p className="price">￦10,000</p>
+              <Slider className="slider" {...settings}>
+                <div className="product-form">
+                  <img className="product-img" src={slideImage}></img>
+                  <div className="slide-info">
+                    <p className="product-name">sample</p>
+                    <p className="hash-tag">sample</p>
+                    <p className="price">￦10,000</p>
+                  </div>
                 </div>
-              </div>
-              <div className="product-form">
-                <img className="product-img" src={slideImage}></img>
-                <div className="slide-info">
-                  <p className="product-name">sample</p>
-                  <p className="hash-tag">sample</p>
-                  <p className="price">￦10,000</p>
+                <div className="product-form">
+                  <img className="product-img" src={slideImage}></img>
+                  <div className="slide-info">
+                    <p className="product-name">sample</p>
+                    <p className="hash-tag">sample</p>
+                    <p className="price">￦10,000</p>
+                  </div>
                 </div>
-              </div>
-              <div className="product-form">
-                <img className="product-img" src={slideImage}></img>
-                <div className="slide-info">
-                  <p className="product-name">sample</p>
-                  <p className="hash-tag">sample</p>
-                  <p className="price">￦10,000</p>
+                <div className="product-form">
+                  <img className="product-img" src={slideImage}></img>
+                  <div className="slide-info">
+                    <p className="product-name">sample</p>
+                    <p className="hash-tag">sample</p>
+                    <p className="price">￦10,000</p>
+                  </div>
                 </div>
-              </div>
+                <div className="product-form">
+                  <img className="product-img" src={slideImage}></img>
+                  <div className="slide-info">
+                    <p className="product-name">sample</p>
+                    <p className="hash-tag">sample</p>
+                    <p className="price">￦10,000</p>
+                  </div>
+                </div>
+                <div className="product-form">
+                  <img className="product-img" src={slideImage}></img>
+                  <div className="slide-info">
+                    <p className="product-name">sample</p>
+                    <p className="hash-tag">sample</p>
+                    <p className="price">￦10,000</p>
+                  </div>
+                </div>
+                <div className="product-form">
+                  <img className="product-img" src={slideImage}></img>
+                  <div className="slide-info">
+                    <p className="product-name">sample</p>
+                    <p className="hash-tag">sample</p>
+                    <p className="price">￦10,000</p>
+                  </div>
+                </div>
+                <div className="product-form">
+                  <img className="product-img" src={slideImage}></img>
+                  <div className="slide-info">
+                    <p className="product-name">sample</p>
+                    <p className="hash-tag">sample</p>
+                    <p className="price">￦10,000</p>
+                  </div>
+                </div>
+                <div className="product-form">
+                  <img className="product-img" src={slideImage}></img>
+                  <div className="slide-info">
+                    <p className="product-name">sample</p>
+                    <p className="hash-tag">sample</p>
+                    <p className="price">￦10,000</p>
+                  </div>
+                </div>
+                <div className="product-form">
+                  <img className="product-img" src={slideImage}></img>
+                  <div className="slide-info">
+                    <p className="product-name">sample</p>
+                    <p className="hash-tag">sample</p>
+                    <p className="price">￦10,000</p>
+                  </div>
+                </div>
+                <div className="product-form">
+                  <img className="product-img" src={slideImage}></img>
+                  <div className="slide-info">
+                    <p className="product-name">sample</p>
+                    <p className="hash-tag">sample</p>
+                    <p className="price">￦10,000</p>
+                  </div>
+                </div>
+                <div className="product-form">
+                  <img className="product-img" src={slideImage}></img>
+                  <div className="slide-info">
+                    <p className="product-name">sample</p>
+                    <p className="hash-tag">sample</p>
+                    <p className="price">￦10,000</p>
+                  </div>
+                </div>
+                <div className="product-form">
+                  <img className="product-img" src={slideImage}></img>
+                  <div className="slide-info">
+                    <p className="product-name">sample</p>
+                    <p className="hash-tag">sample</p>
+                    <p className="price">￦10,000</p>
+                  </div>
+                </div>
+              </Slider>
             </div>
             <Aside className="Aside" />
           </div>
