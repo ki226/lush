@@ -7,7 +7,7 @@ class BrandDetail extends Component {
   render() {
     return (
       <div
-        className={`BrandDetail ${this.props.brandMenuDown ? "show" : "hide"}`}
+        className={`BrandDetail ${this.props.menuDown === 1 ? "show" : "hide"}`}
         // onMouseLeave={this.props.BrandmenuUp}
         //   style={{ display: this.props.brandDisplay }}
       >

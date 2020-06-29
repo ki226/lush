@@ -20,6 +20,23 @@
       .all-slide-list {
         display: flex;
         justify-content: center;
+        .slider {
+          height: 476px;
+          width: 900px;
+          .slick-dots {
+            margin-top: 25px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            li {
+              padding-left: 15px;
+            }
+
+            .slick-active div {
+              background-color: black;
+            }
+          }
+        }
 
         .product-form {
           .slide-info {
@@ -40,6 +57,10 @@
             }
           }
         }
+      }
+      .Aside {
+        top: -1330px;
+        left: -10px;
       }
     }
   }

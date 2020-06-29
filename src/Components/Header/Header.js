@@ -1,50 +1,27 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./Header.scss";
 import mainLogo from "Images/logo.png";
 import topSearchIcon from "./Images/top_search_icon.png";
 import topCartIcon from "./Images/top_cart_icon.png";
 import topMyPageIcon from "./Images/top_mypage_icon.png";
 import ProductDetail from "Components/ProductDetail";
 import BrandDetail from "Components/BrandDetail";
+import "./Header.scss";
 
 class Header extends Component {
   state = {
-    productDropDownMenu: "",
-    brandDropDownMenu: "",
-    popDropDownMenu: "",
+    activeTab: null,
   };
 
-  ProductMenuDropDown = () => {
+  menuDown = (id) => {
     this.setState({
-      productDropDownMenu: true,
-    });
-  };
-  ProductMenuUp = () => {
-    this.setState({
-      productDropDownMenu: "",
+      activeTab: id,
     });
   };
 
-  BrandMenuDropDown = () => {
+  menuUp = () => {
     this.setState({
-      brandDropDownMenu: true,
-    });
-  };
-  BrandMenuUp = () => {
-    this.setState({
-      brandDropDownMenu: "",
-    });
-  };
-
-  popMenuDropDown = () => {
-    this.setState({
-      popDropDownMenu: true,
-    });
-  };
-  popMenuUp = () => {
-    this.setState({
-      popDropDownMenu: "",
+      activeTab: null,
     });
   };
 
@@ -62,29 +39,24 @@ class Header extends Component {
               <ul className="main-menu-list">
                 <li
                   className="product-menu"
-                  onMouseOver={this.ProductMenuDropDown}
-                  onMouseLeave={this.ProductMenuUp}
+                  onMouseOver={() => this.menuDown(0)}
+                  onMouseLeave={this.menuUp}
                 >
                   <Link className="main-menu" to="/product">
                     제품
                   </Link>
-                  <ProductDetail
-                    // menuUp={this.ProductMenuUp}
-                    productMenuDown={this.state.productDropDownMenu}
-                  />
+
+                  <ProductDetail menuDown={this.state.activeTab} />
                 </li>
                 <li
                   className="brand-menu"
-                  onMouseOver={this.BrandMenuDropDown}
-                  onMouseLeave={this.BrandMenuUp}
+                  onMouseOver={() => this.menuDown(1)}
+                  onMouseLeave={this.menuUp}
                 >
                   <Link className="main-menu" to="/brand">
                     브랜드
                   </Link>
-                  <BrandDetail
-                    // menuUP={this.BrandmenuUp}
-                    brandMenuDown={this.state.brandDropDownMenu}
-                  />
+                  <BrandDetail menuDown={this.state.activeTab} />
                 </li>
                 <li className="store-menu">
                   <Link className="main-menu" to="/storeInfo">
@@ -104,26 +76,34 @@ class Header extends Component {
               </ul>
             </div>
             <ul className="main-icons">
-              <li className="main-icon-list">
+              <li className="main-icon-list header-search">
                 <img className="main-icon" src={topSearchIcon} alt="search" />
               </li>
-              <li className="main-icon-list">
+              <li className="main-icon-list header-cart">
                 <img className="main-icon" src={topCartIcon} alt="cart" />
+                <div className="cart-count">
+                  <span className="cart-count-number">0</span>
+                </div>
               </li>
               <li
                 className="main-icon-list header-pop"
-                onMouseOver={this.popMenuDropDown}
-                onMouseLeave={this.popMenuUp}
+                onMouseOver={() => this.menuDown(2)}
+                onMouseLeave={this.menuUp}
               >
+                <Link to="/mypage"></Link>
                 <img className="main-icon" src={topMyPageIcon} alt="mypage" />
                 <div
                   className={`pop-form ${
-                    this.state.popDropDownMenu ? "pop-from-show" : "pop-hide"
+                    this.state.activeTab === 2 ? "pop-form-show" : "pop-hide"
                   }`}
                 >
                   <ul className="pop-mypage">
-                    <li className="pop-menu login">로그인</li>
-                    <li className="pop-menu sign-up">회원가입</li>
+                    <li className="pop-menu login">
+                      <Link to="/login">로그인</Link>
+                    </li>
+                    <li className="pop-menu sign-up">
+                      <Link to="/signup">회원가입</Link>
+                    </li>
                     <li className="pop-menu scout">스카우트</li>
                     <li className="pop-menu customer">고객센터</li>
                   </ul>

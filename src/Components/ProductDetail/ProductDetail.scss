@@ -1,4 +1,5 @@
 .ProductDetail {
+  display: none;
   position: absolute;
   width: 1456px;
   height: 378px;
@@ -45,6 +46,7 @@
   margin-top: 238px;
   left: -780px;
   z-index: 1;
+
   .Brand-detail-layout {
     width: 1200px;
     display: flex;
