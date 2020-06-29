@@ -3,6 +3,8 @@ import SearchBox from "Components/SearchBox";
 import Store from "./Store";
 import "./StoreInfo.scss";
 
+import { DATA_PATH } from "config";
+
 const SEARCH_BY_LIST = ["매장명", "내용"];
 
 class StoreInfo extends Component {
@@ -15,7 +17,7 @@ class StoreInfo extends Component {
   };
 
   componentDidMount() {
-    fetch(process.env.PUBLIC_URL + "storeData.json")
+    fetch(DATA_PATH + "storeData.json")
       .then((res) => res.json())
       .then((data) =>
         this.setState({ stores: data.stores, searchResult: data.stores })
