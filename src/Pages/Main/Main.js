@@ -1,19 +1,25 @@
 import React, { Component } from "react";
 import "./Main.scss";
-import HeroBanner from "Components/HeroBanner";
+import "../../Styles/reset.scss";
+// import HeroBanner from "Components/HeroBanner";
+import Slider from "Components/Slider";
 import MainUnderContents from "Components/MainUnderContents";
 import overImage from "./Images/media_form_img.gif";
 import underImageleft from "./Images/media_form_img2.jpg";
 import underImageRight from "./Images/media_form_img3.jpg";
 import slideImage from "./Images/slide_image.jpg";
 import spaImage from "./Images/spa.gif";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+import Aside from "Components/Aside";
 
 class Main extends Component {
   state = {};
+
   render() {
     return (
       <div className="Main">
-        <HeroBanner />
+        <Slider />
         <div className="middle-slide">
           <div className="middle-slide-form">
             <h1 className="middle-slide-title">나만 알고 싶은 향기</h1>
@@ -43,6 +49,7 @@ class Main extends Component {
                 </div>
               </div>
             </div>
+            <Aside className="Aside" />
           </div>
         </div>
         {/* <div className="slide-btn">

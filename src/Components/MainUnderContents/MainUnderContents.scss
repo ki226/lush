@@ -68,5 +68,19 @@
         }
       }
     }
+    .sns {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      bottom: 130px;
+      margin-left: 160px;
+      width: 280px;
+      height: 39px;
+      .underIcon {
+        width: 39px;
+        height: 39px;
+        margin: 0 10px;
+      }
+    }
   }
 }

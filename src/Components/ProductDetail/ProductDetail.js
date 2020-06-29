@@ -8,11 +8,8 @@ class ProductDetail extends Component {
     return (
       <div
         className={`ProductDetail ${
-          this.props.productMenuDown ? "product-show" : "hide"
+          this.props.menuDown === 0 ? "product-show" : "hide"
         }`}
-        // menuUp={this.props.ProductMenuUp}
-        // onMouseLeave={this.props.ProductmenuUp}
-        // style={{ display: this.props.productDisplay }}
       >
         <div className="product-detail-layout">
           <ul className="product-list">

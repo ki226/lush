@@ -54,7 +54,7 @@
     .main-icons {
       margin-left: 20px;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       height: 100px;
       align-items: center;
       .main-icon-list {
@@ -64,10 +64,32 @@
         .main-icon {
           width: 23px;
           height: 23px;
-          margin-right: 40px;
+          margin-left: 40px;
           cursor: pointer;
         }
       }
+      .header-cart {
+        display: flex;
+        flex-direction: row-reverse;
+        .cart-count {
+          position: absolute;
+          margin-left: 4px;
+          top: 50px;
+          width: 16px;
+          height: 16px;
+          background-color: white;
+          border-radius: 8px;
+          border: 1px solid white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .cart-count-number {
+            color: black;
+            font-size: 10px;
+          }
+        }
+      }
+
       .header-pop {
         position: relative;
         .pop-form {
@@ -100,37 +122,36 @@
             }
           }
         }
-        // .pop-form-show {
-        //   position: absolute;
-        //   width: 222px;
-        //   height: 185px;
-        //   left: -180px;
-        //   margin-top: 20px;
-        //   .pop-mypage {
-        //     border: 1px solid #eaeaea;
-        //     display: flex;
-        //     flex-direction: column;
-        //     justify-content: center;
-        //     .pop-menu {
-        //       width: 220px;
-        //       height: 46px;
-        //       background-color: white;
-        //       text-align: center;
-        //       font-size: 11px;
-        //       border-bottom: 1px solid #eaeaea;
-        //       display: flex;
-        //       align-items: center;
-        //       justify-content: center;
-        //       cursor: pointer;
-        //       transition: 0.5s;
-        //     }
-        //     .pop-menu:hover {
-        //       background-color: black;
-        //       color: white;
-        //     }
-        //   }
-        // }
-
+        .pop-form-show {
+          position: absolute;
+          width: 222px;
+          height: 185px;
+          left: -160px;
+          margin-top: 120px;
+          .pop-mypage {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid #eaeaea;
+            .pop-menu {
+              width: 220px;
+              height: 46px;
+              background-color: white;
+              text-align: center;
+              font-size: 11px;
+              border-bottom: 1px solid #eaeaea;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              transition: 0.5s;
+            }
+            .pop-menu:hover {
+              background-color: black;
+              color: white;
+            }
+          }
+        }
         .pop-hide {
           display: none;
         }

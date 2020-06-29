@@ -1,45 +1,36 @@
 .HeroBanner {
-  position: relative;
+  // margin-top: 24px;
   height: 580px;
-  //   border: 1px solid;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow: hidden;
-
   .slide-wrap {
-    position: relative;
-    display: flex;
-    flex-flow: column wrap;
-    height: inherit;
-    justify-content: center;
-    align-items: center;
+    height: 580px;
+    overflow: hidden;
 
-    .slick-dots-form {
-      position: absolute;
-      margin-left: 21%;
-
-      .slick-dots {
-        width: 14px;
-        height: 14px;
-
-        .slick-dot1,
-        .slick-dot2,
-        .slick-dot3,
-        .slick-dot4,
-        .slick-dot5,
-        .slick-dot6,
-        .slick-dot7 {
-          width: 14px;
-          height: 14px;
-          border-radius: 7px;
-          margin-top: 10px;
-          border: solid white;
-          border-width: thin;
-          background-color: none;
-          cursor: pointer;
-        }
-      }
+    .banner-image {
+      height: 580px;
+      background-position-x: 50%;
+    }
+    .image1 {
+      background-image: url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/eabfc357ada2affec38fa44070e4621e_52320.jpg);
+    }
+    .image2 {
+      background-image: url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/85cb4b9274401713598d058db6c6e95f_65119.jpg);
+    }
+    .image3 {
+      background-image: url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/b528d81b7da2507d35e4042a3d3e7772_94340.jpg);
+    }
+    .image4 {
+      background-image: url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/28cb182c7e0303fa96dbfb1b91aec1f4_84552.jpg);
+    }
+    .image5 {
+      background-image: url(http://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/09dce0db57bceb149f04f372c539ae0c_44054.jpg);
+    }
+    .image6 {
+      background-image: url(http://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/c60c37323201776536bc408ce990952d_31626.jpg);
     }
   }
+}
+
+.slick-dots {
+  display: flex;
+  margin-bottom: 50px;
 }
