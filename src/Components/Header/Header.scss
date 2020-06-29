@@ -36,12 +36,14 @@
           display: flex;
           align-items: center;
         }
+
         .brand-menu {
           position: relative;
           height: 100px;
           display: flex;
           align-items: center;
         }
+
         .main-menu {
           font-size: 16px;
           margin-right: 75px;
@@ -57,10 +59,12 @@
       justify-content: space-between;
       height: 100px;
       align-items: center;
+
       .main-icon-list {
         height: 100px;
         display: flex;
         align-items: center;
+
         .main-icon {
           width: 23px;
           height: 23px;
@@ -71,6 +75,7 @@
       .header-cart {
         display: flex;
         flex-direction: row-reverse;
+
         .cart-count {
           position: absolute;
           margin-left: 4px;
@@ -83,6 +88,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+
           .cart-count-number {
             color: black;
             font-size: 10px;
@@ -92,17 +98,20 @@
 
       .header-pop {
         position: relative;
+
         .pop-form {
           position: absolute;
           width: 222px;
           height: 185px;
           left: -180px;
           margin-top: 120px;
+
           .pop-mypage {
             display: flex;
             flex-direction: column;
             justify-content: center;
             border: 1px solid #eaeaea;
+
             .pop-menu {
               width: 220px;
               height: 46px;
@@ -116,23 +125,27 @@
               cursor: pointer;
               transition: 0.5s;
             }
+
             .pop-menu:hover {
               background-color: black;
               color: white;
             }
           }
         }
+
         .pop-form-show {
           position: absolute;
           width: 222px;
           height: 185px;
           left: -160px;
           margin-top: 120px;
+
           .pop-mypage {
             display: flex;
             flex-direction: column;
             justify-content: center;
             border: 1px solid #eaeaea;
+
             .pop-menu {
               width: 220px;
               height: 46px;
@@ -146,12 +159,14 @@
               cursor: pointer;
               transition: 0.5s;
             }
+
             .pop-menu:hover {
               background-color: black;
               color: white;
             }
           }
         }
+
         .pop-hide {
           display: none;
         }

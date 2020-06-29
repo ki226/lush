@@ -1,12 +1,10 @@
 import React, { Component } from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./TopSlider.scss";
-import Slider from "react-slick";
 
 class TopSlider extends Component {
-  state = {};
-
   render() {
     const settings = {
       autoplay: true,

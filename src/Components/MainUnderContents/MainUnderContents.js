@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./MainUnderContents.scss";
 import fbIcon from "./Image/fb_icon.gif";
 import instaIcon from "./Image/insta_icon.gif";
 import youtubeIcon from "./Image/youtube_icon.gif";
 import kakaoIcon from "./Image/kakao_icon.gif";
+import "./MainUnderContents.scss";
 
 class MainUnderContents extends Component {
-  state = {};
   render() {
     return (
       <div className="MainUnderContents">

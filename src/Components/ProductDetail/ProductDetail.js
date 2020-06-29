@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import "./ProductDetail.scss";
 
 class ProductDetail extends Component {
-  state = {};
-
   render() {
     return (
       <div

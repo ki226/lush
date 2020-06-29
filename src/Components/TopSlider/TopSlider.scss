@@ -1,26 +1,27 @@
 .TopSlider {
   // margin-top: 24px;
   height: 580px;
+
   .slide-wrap {
     width: 100%;
     height: 580px;
     overflow: hidden;
+
     .image-form {
       height: 580px;
       width: 100%;
       overflow: hidden;
-      //   display: flex;
-      //   justify-content: center;
+
       .banner-images {
         height: 580px;
       }
       .image1 {
         width: 100%;
         height: 580px;
-        // overflow: hidden;
         background: url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/c60c37323201776536bc408ce990952d_31626.jpg);
         background-position-x: 50%;
       }
+
       .image2 {
         width: 100%;
         height: 580px;
@@ -28,6 +29,7 @@
         background: url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/eabfc357ada2affec38fa44070e4621e_52320.jpg);
         background-position-x: 50%;
       }
+
       .image3 {
         width: 100%;
         height: 580px;
@@ -35,6 +37,7 @@
         background: url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/85cb4b9274401713598d058db6c6e95f_65119.jpg);
         background-position-x: 50%;
       }
+
       .image4 {
         width: 100%;
         height: 580px;
@@ -42,6 +45,7 @@
         background: url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/b528d81b7da2507d35e4042a3d3e7772_94340.jpg);
         background-position-x: 50%;
       }
+
       .image5 {
         width: 100%;
         height: 580px;
@@ -49,6 +53,7 @@
         background: url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/28cb182c7e0303fa96dbfb1b91aec1f4_84552.jpg);
         background-position-x: 50%;
       }
+
       .image6 {
         width: 100%;
         height: 580px;
@@ -56,15 +61,17 @@
         background: url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/09dce0db57bceb149f04f372c539ae0c_44054.jpg);
         background-position-x: 50%;
       }
+
       .slick-dots {
         position: absolute;
         top: 30px;
         display: flex;
-        // flex-direction: column;
         justify-content: center;
+
         li {
           padding-top: 25px;
         }
+
         .slick-active div {
           transition: 0.8s;
           background-color: white;

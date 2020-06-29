@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import "./Main.scss";
-import "../../Styles/reset.scss";
-import TopSlider from "Components/TopSlider";
 import Slider from "react-slick";
+import Aside from "Components/Aside";
+import TopSlider from "Components/TopSlider";
 import MainUnderContents from "Components/MainUnderContents";
 import overImage from "./Images/media_form_img.gif";
 import underImageleft from "./Images/media_form_img2.jpg";
@@ -11,7 +10,8 @@ import slideImage from "./Images/slide_image.jpg";
 import spaImage from "./Images/spa.gif";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Aside from "Components/Aside";
+import "./Main.scss";
+import "../../Styles/reset.scss";
 
 class Main extends Component {
   state = {};
@@ -162,22 +162,7 @@ class Main extends Component {
             <Aside className="Aside" />
           </div>
         </div>
-        {/* <div className="slide-btn">
-          <ul className="slick-dots-form">
-            <li className="slick-dots">
-              <div className="slick-dot1"></div>
-            </li>
-            <li className="slick-dots">
-              <div className="slick-dot2"></div>
-            </li>
-            <li className="slick-dots">
-              <div className="slick-dot3"></div>
-            </li>
-            <li className="slick-dots">
-              <div className="slick-dot4"></div>
-            </li>
-          </ul>
-        </div> */}
+
         <div className="media-form">
           <embed
             className="youtube"
