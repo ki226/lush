@@ -166,7 +166,7 @@ class Main extends Component {
         <div className="media-form">
           <embed
             className="youtube"
-            src="https://www.youtube.com/embed/rRzxEiBLQCA?rel=0&amp;controls=0&amp;showinfo=0"
+            src="https://www.youtube.com/embed/LPfcZXXCuFY"
           ></embed>
           <div className="media-form-img">
             <div className="media-form-img-over">

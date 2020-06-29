@@ -20,14 +20,17 @@
       .all-slide-list {
         display: flex;
         justify-content: center;
+
         .slider {
           height: 476px;
           width: 900px;
+
           .slick-dots {
             margin-top: 25px;
             position: absolute;
             display: flex;
             justify-content: center;
+            bottom: 100px;
             li {
               padding-left: 15px;
             }
