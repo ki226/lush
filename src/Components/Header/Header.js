@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import ProductDetail from "Components/ProductDetail";
+import BrandDetail from "Components/BrandDetail";
 import mainLogo from "Images/logo.png";
 import topSearchIcon from "./Images/top_search_icon.png";
 import topCartIcon from "./Images/top_cart_icon.png";
 import topMyPageIcon from "./Images/top_mypage_icon.png";
-import ProductDetail from "Components/ProductDetail";
-import BrandDetail from "Components/BrandDetail";
 import "./Header.scss";
 
 class Header extends Component {
