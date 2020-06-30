@@ -90,8 +90,13 @@ class Header extends Component {
                 onMouseOver={() => this.menuDown(2)}
                 onMouseLeave={this.menuUp}
               >
-                <Link to="/mypage"></Link>
-                <img className="main-icon" src={topMyPageIcon} alt="mypage" />
+                <Link to="/mypage">
+                  <img
+                    className="main-icon mypage-icon"
+                    src={topMyPageIcon}
+                    alt="mypage"
+                  />
+                </Link>
                 <div
                   className={`pop-form ${
                     this.state.activeTab === 2 ? "pop-form-show" : "pop-hide"
