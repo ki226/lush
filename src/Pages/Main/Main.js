@@ -11,7 +11,6 @@ import spaImage from "./Images/spa.gif";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Main.scss";
-import "../../Styles/reset.scss";
 
 class Main extends Component {
   state = {};

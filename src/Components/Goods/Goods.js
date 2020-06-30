@@ -95,5 +95,4 @@ class Goods extends Component {
     );
   }
 }
-
 export default Goods;
