@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import Slider from "react-slick";
 import Aside from "Components/Aside";
@@ -12,7 +11,6 @@ import spaImage from "./Images/spa.gif";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Main.scss";
-import GoodsDetail from "Components/GoodsDetail";
 
 class Main extends Component {
   state = {};
@@ -56,10 +54,6 @@ class Main extends Component {
     };
     return (
       <div className="Main">
-<<<<<<< HEAD
-        <div>Main</div>
-        <GoodsDetail />
-=======
         <TopSlider />
         <div className="middle-slide">
           <div className="middle-slide-form">
@@ -201,7 +195,6 @@ class Main extends Component {
         <div className="main-under">
           <MainUnderContents />
         </div>
->>>>>>> master
       </div>
     );
   }
