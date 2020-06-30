@@ -2,16 +2,28 @@ import React, { Component } from "react";
 import GoodsList from "Components/GoodsList";
 import "./Product.scss";
 
+import { DATA_PATH } from "config";
+
 class Product extends Component {
-  state = {
-    product: null,
-    loading: true,
-  };
+  constructor(props) {
+    super(props);
+    const {
+      location: { search },
+    } = this.props;
+    this.state = {
+      loading: true,
+      product: [],
+      count: [],
+      categoryCode: search.split("=")[1],
+    };
+  }
 
   componentDidMount() {
-    fetch(process.env.PUBLIC_URL + "productData.json")
+    fetch(DATA_PATH + "productData.json")
       .then((res) => res.json())
-      .then((data) => this.setState({ product: data }))
+      .then((data) =>
+        this.setState({ product: data.product, count: data.count })
+      )
       .catch((error) => console.log("Error occurred", error))
       .finally(() => {
         this.setState({ loading: false });
@@ -19,14 +31,13 @@ class Product extends Component {
   }
 
   render() {
-    const { loading, product } = this.state;
-    return loading ? null : (
+    const { loading, product, count, categoryCode } = this.state;
+    return loading && product.length === 0 ? null : (
       <div className="Product">
         <GoodsList
-          category_name={product.category_name}
-          category_id={product.category_id}
-          sub_category={product.sub_category}
-          results={product.results}
+          productList={product}
+          counts={count}
+          categoryCode={categoryCode}
         />
       </div>
     );

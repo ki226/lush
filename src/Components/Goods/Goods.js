@@ -1,93 +1,66 @@
 import React, { Component } from "react";
 import "./Goods.scss";
+import latest from "./Images/latest.jpg";
+import vegan from "./Images/vegan.jpg";
+import soldout from "./Images/soldout.jpg";
+import buttonWish from "./Images/btn_wish.png";
+import buttonCart from "./Images/btn_cart.png";
 
 class Goods extends Component {
   render() {
     const {
-      goods_no,
-      goods_name,
-      goods_path,
-      thumbnail_path,
-      goods_price,
-      sold_out,
-      latest,
-      vegan,
-      tags,
+      product_number,
+      product_name,
+      image,
+      price,
+      stock,
+      is_new,
+      is_vegan,
+      hash_tag,
+      toggleCartModal,
     } = this.props;
 
     return (
       <div className="Goods">
         <div className="choice">
-          <a
-            href={`https://lush.co.kr/goods/goods_view.php?goodsNo=${goods_path}`}
-          >
-            <span>❤️</span>
-          </a>
-          <a
-            href={`https://lush.co.kr/goods/goods_view.php?goodsNo=${goods_path}`}
-          >
-            <span>👜</span>
-          </a>
+          {/* 링크 수정 필요 */}
+          <div className="button-wish button">
+            <img src={buttonWish} />
+          </div>
+          <div className="button-cart button">
+            <img
+              src={buttonCart}
+              onClick={() => toggleCartModal(product_number)}
+            />
+          </div>
         </div>
         <div className="thumbnail">
           {/* <Link to={/goods/${id}} */}
-          <a href={goods_path}>
-            <img className="thumbnail-img" src={thumbnail_path} />
+          <a>
+            <img className="thumbnail-img" src={image} />
           </a>
         </div>
         <div className="goods-info">
           <div className="condtion">
-            {/* {modifiers &&
-              modifiers.length > 0 &&
-              modifiers.map((modifier, idx) => (
-                <img
-                  key={modifier}
-                  className="condition-img"
-                  alt={modifier}
-                  src={require(`./Images/${modifier}.jpg`)}
-                />
-              ))} */}
-            {sold_out && (
-              <img
-                className="condition-img"
-                alt="sold out"
-                src={require(`./Images/soldout.jpg`)}
-              />
+            {stock <= 0 && (
+              <img className="condition-img" alt="sold out" src={soldout} />
             )}
-            {latest && (
-              <img
-                className="condition-img"
-                alt="latest"
-                src={require(`./Images/latest.jpg`)}
-              />
+            {is_new && (
+              <img className="condition-img" alt="latest" src={latest} />
             )}
-            {vegan && (
-              <img
-                className="condition-img"
-                alt="vegan"
-                src={require(`./Images/vegan.jpg`)}
-              />
+            {is_vegan && (
+              <img className="condition-img" alt="vegan" src={vegan} />
             )}
           </div>
           <div className="text">
-            <a href={goods_path}>
-              <span className="goods-name">{goods_name}</span>
-              <span className="goods-tags">
-                {tags.map((tag, idx) =>
-                  idx === tags.length - 1 ? `#${tag}` : `#${tag} `
-                )}
-              </span>
+            <a href="#">
+              <span className="goods-name">{product_name}</span>
+              <span className="goods-tags">{hash_tag}</span>
             </a>
           </div>
           <div className="price">
             <div className="cost">
-              <strong>
-                ￦{" "}
-                {`${goods_price.slice(
-                  0,
-                  goods_price.length - 3
-                )},${goods_price.slice(goods_price.length - 3)}`}
-              </strong>
+              <strong>￦ {price.toLocaleString()}</strong>
             </div>
           </div>
         </div>
