@@ -49,7 +49,7 @@ class Brand extends Component {
               <p className="right-top right-text">
                 우리는 <b>동물실험을 하지 않는 회사와 거래</b>
                 <br />
-                인체게 직접 테스트함으로써
+                인체에 직접 테스트함으로써
                 <br />
                 안전한 제품을 만들 수 있다고 믿습니다.
               </p>
