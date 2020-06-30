@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .navibar {
+    height: 48px;
+    width: 1176px;
+    border: none;
+    // display: flex;
+    // flex-direction: row;
+    .navibartap {
+      //padding: 0 0 80px 0;
+      position: relative;
+      display: flex;
+      //   display: flex;
+      flex-direction: row;
+
+      .onA {
+        width: 400px;
+        height: 45px;
+        border: none;
+        //background-color: blue;
+        border-left: 3px solid black;
+        border-top: 3px solid black;
+        border-right: 3px solid black;
+
+        .ona {
+          font-size: 25px;
+          //position: absolute;
+          //margin-right: 30px;
+          //border-right: 1px solid black;
+
+          display: table;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      .onB {
+        width: 400px;
+        height: 45px;
+        //background-color: green;
+        border: none;
+        border-bottom: 3px solid black;
+        border-top: 2px solid rgb(156, 154, 154);
+        border-right: 2px solid rgb(156, 154, 154);
+        .onb {
+          font-size: 25px;
+
+          display: table;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      .onC {
+        width: 392px;
+        height: 45px;
+        border: none;
+        border-bottom: 3px solid black;
+        border-top: 2px solid rgb(156, 154, 154);
+        border-right: 2px solid rgb(156, 154, 154);
+        //background-color: hotpink;
+        .onc {
+          font-size: 25px;
+
+          display: table;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  .productdetailinfo {
+    padding: 30px 0;
+    text-align: center;
+    .video {
+      width: 1180px;
+      height: 550px;
+      border: 0px;
+      .lushvideo {
+        width: 1180px;
+        height: 550px;
+      }
+    }
+    .todayshipped {
+      width: 1180px;
+      height: 300px;
+      margin-top: 30px;
+    }
+  }
+}

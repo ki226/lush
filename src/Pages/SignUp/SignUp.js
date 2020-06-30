@@ -20,11 +20,13 @@ class SignUp extends Component {
   handleInput = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
+
   handleID = (event) => {
     this.setState({
       user_id: event.target.value,
     });
   };
+
   //아이디 input 에 값이 입력되는지 확인하는 코드
   handlePassword = (event) => {
     if (event.keyCode === 9) {
@@ -33,17 +35,19 @@ class SignUp extends Component {
       });
     }
   };
+
   // 비밀번호 input에 값이 입력되는지 확인하는 코드
   handleConfirmPassword = (event) => {
     this.setState({
       confirm_password: event.target.value,
     });
   };
+
   // 입력했던 비밀번호와 같은지 확인하는 코드
   handleComparePassword = (event) => {
-    console.log(event.keyCode);
+    //console.log(event.keyCode);
     if (event.keyCode === 9) {
-      console.log("지원");
+      //console.log("지원");
     }
     // if (event.key === "Enter" || event.key === "Tab") {
     //   this.state.password === this.state.compare_password
@@ -81,29 +85,34 @@ class SignUp extends Component {
   //   const { password, comfirm_password } = this.state;
   //   return password === confirm_password;
   // }
+
   handleName = (event) => {
     this.setState({
       name: event.target.value,
     });
   };
+
   // 이름 input 에 값이 입력되는지 확인하는 코드
   handleNickName = (event) => {
     this.setState({
       nickname: event.target.value,
     });
   };
+
   // 닉네임 input 에 값이 입력되는지 확인하는 코드
   handleEmail = (event) => {
     this.setState({
       email: event.target.value,
     });
   };
+
   // email input 에 값이 입력되는지 확인하는 코드
   handlePhonenumber = (event) => {
     this.setState({
       phonenumber: event.target.value,
     });
   };
+
   // phonenumner input 에 값이 입력되는지 확인하는 코드
   handleAddress = (event) => {
     this.setState({
@@ -117,7 +126,6 @@ class SignUp extends Component {
   //   }
   // };
 
-  componentDidMount() {}
   handleButton = () => {
     // post
     fetch("백앤드 서버주소", {
@@ -134,23 +142,10 @@ class SignUp extends Component {
         phonenumber: this.state.phonenumber,
         address: this.state.address,
       }),
-    })
-      .then((res) => res.json())
-      .then((res) => console.log(res)); // then.(res=>localStorage.setItem("token", res.token)) -> 토큰 받음.
-    // .then(console.log("OK"));
+    });
   };
 
-  //state = {};
   render() {
-    // console.log(this.state.user_id);
-    console.log(this.state.password);
-    // console.log(this.state.confirm_password);
-    // console.log(this.state.name);
-    // console.log(this.state.nickname);
-    // console.log(this.state.email);
-    // console.log(this.state.phonenumber);
-    // console.log(this.state.address);
-
     return (
       <div className="SignUp">
         <div className="title">

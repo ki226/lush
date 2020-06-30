@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import "./Login.scss";
 import icon_id from "./Images/icon_id.png";
 import icon_password from "./Images/icon_password.png";
 import logo_naver_n from "./Images/logo-naver_n.gif";
+import "./Login.scss";
+
 class Login extends Component {
   constructor() {
     super();
@@ -11,24 +12,30 @@ class Login extends Component {
       password: "",
     };
   }
+
+  //componentDidMount() {}
+  //내가 정의한 메소드(함수) 중에서 가장 먼저 실행되는 함수이다.
+
   handleID = (event) => {
     // console.log("input에 id 값이 입력되는지 확인", event.target.vaule);
     this.setState({
       user_id: event.target.value,
     });
   };
+
   handlePassword = (event) => {
     // console.log("input에 password 값이 입력되는지 확인", event.target.value);
     this.setState({
       password: event.target.value,
     });
   };
+
   handlePasswordEnter = (event) => {
     if (event.key === "Enter") {
       this.handleButton();
     }
   };
-  componentDidMount() {}
+
   handleButton = () => {
     // post
     fetch("http://10.58.0.189:8000/user/signin/", {
@@ -39,22 +46,13 @@ class Login extends Component {
         user_id: this.state.user_id,
         password: this.state.password,
       }),
-    })
-      .then((res) => res.json())
-      .then((res) => console.log(res)); // then.(res=>localStorage.setItem("token", res.token)) -> 토큰 받음.
-    // .then(console.log("OK"));
+    }).then((res) => res.json());
   };
 
   //state = {};
   render() {
-    console.log(this.state.user_id);
-    console.log(this.state.password);
-
     return (
-      <div
-        className="Login
-    "
-      >
+      <div className="Login">
         <div className="content">
           <div className="member">
             <h2>로그인</h2>
@@ -62,13 +60,11 @@ class Login extends Component {
               <div id="tabs">
                 <div className="ntab01">
                   <div className="choice">
-                    <a href="" className="selected">
+                    <span href="" className="selected">
                       회원
-                    </a>
-
-                    <a herf="">비회원</a>
+                    </span>
+                    <span herf="">비회원</span>
                   </div>
-
                   <div className="formLogin">
                     <div className="login">
                       <div className="input-info">
