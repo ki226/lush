@@ -45,7 +45,6 @@ class Header extends Component {
                   <Link className="main-menu" to="/product">
                     제품
                   </Link>
-
                   <ProductDetail menuDown={this.state.activeTab} />
                 </li>
                 <li
@@ -79,12 +78,14 @@ class Header extends Component {
               <li className="main-icon-list header-search">
                 <img className="main-icon" src={topSearchIcon} alt="search" />
               </li>
-              <li className="main-icon-list header-cart">
-                <img className="main-icon" src={topCartIcon} alt="cart" />
-                <div className="cart-count">
-                  <span className="cart-count-number">0</span>
-                </div>
-              </li>
+              <Link to="/shoppingCart">
+                <li className="main-icon-list header-cart">
+                  <img className="main-icon" src={topCartIcon} alt="cart" />
+                  <div className="cart-count">
+                    <span className="cart-count-number">0</span>
+                  </div>
+                </li>
+              </Link>
               <li
                 className="main-icon-list header-pop"
                 onMouseOver={() => this.menuDown(2)}
