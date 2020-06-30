@@ -1,0 +1,45 @@
+{
+  "isMember": true,
+  "items": [
+    {
+      "goods_no": "1000001226",
+      "goods_name": "슬리피 버블바",
+      "goods_category": "베쓰 밤",
+      "goods_path": "1000001226",
+      "goods_thumbnail": "https://lush.co.kr/data/goods/20/02/09/1000001226/1000001226_main_098.jpg",
+      "goods_price": 18000,
+      "count": 1,
+      "selected": true
+    },
+    {
+      "goods_no": "1000001225",
+      "goods_name": "머메이드 테일",
+      "goods_category": "베쓰 밤",
+      "goods_path": "1000001225",
+      "goods_thumbnail": "https://lush.co.kr/data/goods/20/02/09/1000001225/1000001225_main_025.jpg",
+      "goods_price": 18000,
+      "count": 1,
+      "selected": true
+    },
+    {
+      "goods_no": "92",
+      "goods_name": "이클 베이비 봇",
+      "goods_category": "베쓰 밤",
+      "goods_path": "92",
+      "goods_thumbnail": "https://lush.co.kr/data/goods/11/03/30/92/92_main_036.jpg",
+      "goods_price": 6000,
+      "count": 1,
+      "selected": true
+    },
+    {
+      "goods_no": "174",
+      "goods_name": "인터갈라틱",
+      "goods_category": "베쓰 밤",
+      "goods_path": "174",
+      "goods_thumbnail": "https://lush.co.kr/data/goods/16/03/18/174/174_main_098.jpg",
+      "goods_price": 17000,
+      "count": 1,
+      "selected": true
+    }
+  ]
+}

@@ -9,6 +9,7 @@
 body {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 12px;
+  padding-top: 100px;
 }
 
 ol,
@@ -24,4 +25,8 @@ a {
 input,
 button {
   // all: unset;
+}
+
+strong {
+  font-weight: normal;
 }

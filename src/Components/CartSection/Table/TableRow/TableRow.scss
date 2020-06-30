@@ -1,0 +1,84 @@
+$color-font-black: #333333;
+$color-font-gray: #8f8f8f;
+
+.TableRow {
+  padding-bottom: 20px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  .info {
+    padding: 20px 0px 0px 15px;
+    display: flex;
+
+    .thumbnail {
+      img {
+        width: 115px;
+        height: 115px;
+      }
+    }
+    .text {
+      padding-left: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .goods-name {
+        font-size: 18px;
+        color: #333333;
+      }
+
+      .goods-category {
+        font-size: 16px;
+        font-weight: lighter;
+        color: $color-font-gray;
+      }
+    }
+  }
+
+  .button-box {
+    width: 122px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #e7e7e7;
+
+    .count {
+      width: 44px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    button {
+      width: 40px;
+      height: 40px;
+
+      &.countDown {
+        background-image: url("../Images/Button/count_down.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 0px;
+      }
+
+      &.countUp {
+        background-image: url("../Images/Button/count_up.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 0px;
+      }
+    }
+  }
+
+  .price {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .delivery-charge {
+    text-align: center;
+    font-size: 14px;
+    font-weight: lighter;
+    color: #acacac;
+  }
+}

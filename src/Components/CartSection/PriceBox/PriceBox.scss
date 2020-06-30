@@ -1,0 +1,42 @@
+.PriceBox {
+  width: 100%;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 30px;
+  background-color: #f2f2f2;
+  border-top: 1px solid #e7e7e7;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  .sign {
+    padding-left: 20px;
+    font-weight: normal;
+  }
+
+  .goods-price {
+    padding-left: 6px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .delivery {
+    padding-left: 20px;
+  }
+
+  .delivery-charge {
+    padding-left: 6px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .total {
+    padding-left: 20px;
+    font-weight: bold;
+  }
+
+  .total-price {
+    padding-left: 6px;
+    font-size: 26px;
+  }
+}
