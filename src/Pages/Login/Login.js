@@ -60,10 +60,12 @@ class Login extends Component {
               <div id="tabs">
                 <div className="ntab01">
                   <div className="choice">
-                    <span href="" className="selected">
+                    <span href="" className="selected_a">
                       회원
                     </span>
-                    <span herf="">비회원</span>
+                    <span herf="" className="selected_b">
+                      비회원
+                    </span>
                   </div>
                   <div className="formLogin">
                     <div className="login">
@@ -107,8 +109,8 @@ class Login extends Component {
                           type="checkbox"
                           className="checkbox"
                           //name="saveId"
-                          value="y"
-                          checked="true"
+                          value=""
+                          checked=""
                         />
                         <div className="on">아이디 저장</div>
                       </div>

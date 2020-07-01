@@ -22,10 +22,14 @@ class GoodsDetail extends Component {
       <div className="GoodsDetailcontents">
         <div className="mainleft">
           <div className="picturebox">
-            <img src={picture} className={picture} alt="메인사진" />
+            <img src={picture} className="picture" alt="메인사진" />
           </div>
           <div className="picturefootera">
-            <img src="" className="picturefooterimg" alt="하단메인이미지" />
+            <img
+              src={picture}
+              className="picturefooterimg"
+              alt="하단메인이미지"
+            />
           </div>
         </div>
         <div className="mainright">
@@ -75,27 +79,27 @@ class GoodsDetail extends Component {
             </div>
           </div>
 
-          <div className="productname">제품명</div>
-          <div className="hashtag">해쉬태그자리입니다.</div>
+          <div className="productname">{productname}</div>
+          <div className="hashtag">{hashtag}</div>
 
           <div className="allreview"> __개의 후기 보기</div>
           <div className="goodtoknow">Good to Know</div>
           <div className=" priceinfo">
             <div className="price">
               <div className="pricetext">판매가</div>
-              <div className="pricenum">{pricenum}원</div>
+              <div className="pricenum">₩{pricenum}</div>
             </div>
             <div className="goodsweight">
               <div className="goodsweightext">상품무게</div>
-              <div className="goodsweightnum">200g</div>
+              <div className="goodsweightnum">{goodsweightnum}g</div>
             </div>
 
             <div className="ordercount">
               <div className="ordercounttext">구매수량</div>
             </div>
           </div>
-          <div className="price">
-            {/* <span className="count">
+
+          {/* <span className="count">
                 <button
                   type="button"
                   className="downcount"
@@ -128,26 +132,25 @@ class GoodsDetail extends Component {
                   +
                 </button>
               </span> */}
-            {/* <p>
+          {/* <p>
                 <input type="hidden" value="0" name="optionPriceSum[]" />
                 <input type="hidden" value="0.00" name="option_price_0" />$
                 <strong class="option_price_display_0">12,000</strong>
               </p> */}
-          </div>
 
           <div className="endprice">
             <ul>
               <li className="price">
-                <span>총 제품 금액</span>
-                <strong className="goods_total_price">12000원</strong>
+                <span className="pricetext">총 제품 금액</span>
+                <span className="goods_total_price">₩{goods_total_price}</span>
               </li>
               {/* <li className="discounton">
                     <span>총 할인 금액</span>
                     <strong className="total_benefit_price"></strong>
                   </li> */}
               <li className="total">
-                <span>총 합계 금액</span>
-                <strong className="total_price">12000원</strong>
+                <span className="totaltext">총 합계 금액</span>
+                <span className="total_price">₩{total_price}</span>
               </li>
             </ul>
           </div>

@@ -15,6 +15,7 @@ import ShoppingCart from "Pages/ShoppingCart";
 import Login from "Pages/Login";
 import Spa from "Pages/Spa";
 import StoreInfo from "Pages/StoreInfo";
+import KakaoTalk from "Components/KakaoTalk";
 import Header from "Components/Header";
 import Footer from "Components/Footer";
 import GoodsInfo from "Components/GoodsInfo";
@@ -36,6 +37,7 @@ class Routes extends React.Component {
           <Route exact path="/product" component={Product} />
           <Route exact path="/shoppingcart" component={ShoppingCart} />
           <Route exact path="/spa" component={Spa} />
+          <Route exact path="/KaKaoTalk" componenet={KakaoTalk} />
           <Route exact path="/GoodsInfo" component={GoodsInfo} />
           <Route exact path="/storeinfo" component={StoreInfo} />
           <Route exact path="/GoodsReview" component={GoodsReview} />

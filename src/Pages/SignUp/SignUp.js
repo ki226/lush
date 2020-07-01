@@ -12,7 +12,7 @@ class SignUp extends Component {
       name: "",
       nickname: "",
       email: "",
-      phonenumber: "",
+      phone_number: "",
       address: "",
     };
   }
@@ -107,9 +107,9 @@ class SignUp extends Component {
   };
 
   // email input 에 값이 입력되는지 확인하는 코드
-  handlePhonenumber = (event) => {
+  handlephone_number = (event) => {
     this.setState({
-      phonenumber: event.target.value,
+      phone_number: event.target.value,
     });
   };
 
@@ -128,7 +128,7 @@ class SignUp extends Component {
 
   handleButton = () => {
     // post
-    fetch("백앤드 서버주소", {
+    fetch("http://10.58.5.167:8000/user/signup", {
       // fetch 인자의 첫 번째 인자는 api 주소고, 두 번째 인자는 객체 형태이고
       method: "POST", // 메소드 뒤에 포스트를 스트링으로 적어줘야 하는데, get은 디폴트 값이 원래 있어서 안 써줘도 됨.
       body: JSON.stringify({
@@ -139,10 +139,10 @@ class SignUp extends Component {
         name: this.state.name,
         nickname: this.state.nickname,
         email: this.state.email,
-        phonenumber: this.state.phonenumber,
+        phone_number: this.state.phone_number,
         address: this.state.address,
       }),
-    });
+    }).then((res) => res.json());
   };
 
   render() {
@@ -164,10 +164,11 @@ class SignUp extends Component {
             <div className="memberinfohead">
               <span className="infotext">기본정보</span>
               <span className="infostar">
-                *표시는 반드시 입력하셔야 하는 항목입니다.
+                🟥표시는 반드시 입력하셔야 하는 항목입니다.
               </span>
               <div className="form">
                 <div className="box">
+                  <span className="red">🟥</span>
                   <span className="text">아이디</span>
                   <input
                     onChange={this.handleID}
@@ -176,6 +177,7 @@ class SignUp extends Component {
                   />
                 </div>
                 <div className="box">
+                  <span className="red">🟥</span>
                   <span className="text">비밀번호</span>
                   <input
                     onChange={this.handlePassword}
@@ -184,12 +186,14 @@ class SignUp extends Component {
                     type="password"
                   />
                   <div className="pwderrormessage">
-                    {this.state.password.length < 10
+                    {this.state.password.length < 10 &&
+                    this.state.password.length > 4
                       ? "최소 10 이상 입력해주세요."
                       : ""}
                   </div>
                 </div>
                 <div className="box">
+                  <span className="red">🟥</span>
                   <span className="text">비밀번호 확인</span>
                   <input
                     onChange={this.handleConfirmPassword}
@@ -199,6 +203,7 @@ class SignUp extends Component {
                   <span>{this.state.compare_password}</span>
                 </div>
                 <div className="box">
+                  <span className="red">🟥</span>
                   <span className="text">이름</span>
                   <input
                     onChange={this.handleName}
@@ -207,7 +212,7 @@ class SignUp extends Component {
                   />
                 </div>
                 <div className="box">
-                  <span className="text">닉네임</span>
+                  <span className="text_nick">닉네임</span>
                   <input
                     onChange={this.handleNickName}
                     className="inputbox"
@@ -215,46 +220,86 @@ class SignUp extends Component {
                   />
                 </div>
                 <div className="box">
+                  <span className="red">🟥</span>
                   <span className="text">이메일</span>
                   <input
                     onChange={this.handleEmail}
                     className="inputboxa"
                     type="text"
                   />
-                  <input className="inputboxb" type="text" />
-                  {/* 창구현 */}
+                  {/* <input className="inputboxb" type="text" /> */}
+                  <select
+                    className="email_select"
+                    aria-required="true"
+                    aria-label="Select product"
+                    name="email"
+                  >
+                    <option>직접입력</option>
+                    <option>LUSH SPA</option>
+                  </select>
+                  <div className="agree_checkbox">
+                    <input
+                      type="checkbox"
+                      className="checkbox"
+                      value="y"
+                      aria-invalid="false"
+                    />
+                    <label for="maillingFl" class="">
+                      정보/이벤트 메일 수신에 동의합니다.
+                    </label>
+                  </div>
                 </div>
                 <div className="box">
+                  <span className="red">🟥</span>
                   <span className="text">휴대폰번호</span>
                   <input
-                    onChange={this.handlePhonenumber}
+                    onChange={this.handlephone_number}
                     className="inputbox"
                     type="text"
+                    placeholder="  -없이 입력하세요"
                   />
+                  <div className="agree_checkbox">
+                    <input
+                      type="checkbox"
+                      className="checkbox"
+                      value="y"
+                      aria-invalid="false"
+                    />
+                    <label for="maillingFl" class="">
+                      정보/이벤트 SNS 수신에 동의합니다.
+                    </label>
+                  </div>
                 </div>
-                <div className="box">
-                  <span className="text">주소</span>
-                  <input
-                    onChange={this.handleAddress}
-                    className="inputboxa"
-                    type="text"
-                  />
-                  <input className="inputboxb" type="text" />
-                  {/* 창구현 */}
+                <div className="addressbox">
+                  <div className="addressboxa">
+                    <span className="text_address">주소</span>
+                    <input
+                      onChange={this.handleAddress}
+                      className="inputboxa"
+                      type="text"
+                    />
+                    <div className="searchfor_zip_box">
+                      <div className="searchfor_zip">
+                        <p className="searchfor_zip_text">우편번호검색</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="addressboxb">
+                    <div className="address" type="text">
+                      <input className="inputboxc" type="text" />
+                      <input className="inputboxc" type="text" />
+                    </div>
+                  </div>
                 </div>
-                <div className="addressbox" type="text">
-                  <input className="inputboxc" type="text" />
-                  <input className="inputboxc" type="text" />
-                </div>
-                <div className="buttonbox">
-                  <button
-                    onClick={this.handleButton}
-                    type="submit"
-                    className="loginbtn"
-                  >
-                    <p>회원가입</p>
-                  </button>
-                </div>
+              </div>
+              <div className="buttonbox">
+                <button
+                  onClick={this.handleButton}
+                  type="submit"
+                  className="loginbtn"
+                >
+                  <p className="signup_text">회원가입</p>
+                </button>
               </div>
             </div>
           </div>

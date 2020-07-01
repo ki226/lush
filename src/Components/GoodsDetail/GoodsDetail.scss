@@ -9,7 +9,7 @@
   .mainleft {
     //width: 505px;
     //height: 600px;
-    //margin-left: 10px;
+    margin-top: 60px;
     //background-color: darkgoldenrod;
     //display: flex;
     //margin: 0 auto;
@@ -17,22 +17,23 @@
       //background-color: yellow;
       width: 380px;
       height: 380px;
-      margin: 20px 20px 20px 40px;
+      margin: 20px 40px 20px 40px;
       // .picture {
       //   width: 380px;
       //   height: 380px;
       //   margin: 10px;
       // }
-      .picturefootera {
-        background-color: tomato;
+    }
+    .picturefootera {
+      //background-color: tomato;
+      width: 379px;
+      height: 150px;
+      .picturefooterimg {
+        //margin-top: 100px;
+        //margin-left: 10px;
         width: 379px;
-        height: 150px;
-        .picturefooterimg {
-          //margin-top: 100px;
-          //margin-left: 10px;
-          width: 379px;
-          height: 50px;
-        }
+        height: 50px;
+        //background-color: indianred;
       }
     }
   }
@@ -41,7 +42,8 @@
     .location {
       display: inline-flex;
       width: 577px;
-      margin-bottom: 100px;
+      margin-top: 60px;
+      margin-bottom: 40px;
       //height: 52px;
       //background-color: red;
       //position: relative;
@@ -53,21 +55,30 @@
         //background-color: green;
 
         .home {
-          font-size: 30px;
+          font-size: 20px;
           //width: 400px;
         }
       }
       .locationwrap {
         width: 100%;
-        background-color: hotpink;
+        //background-color: hotpink;
         .productselect {
-          width: 100px;
+          //width: 100px;
+          //background-color: indigo;
+          padding: 3px 40px 3px 40px;
         }
         .productdetailselect {
-          width: 100px;
+          //width: 100px;
+          margin-left: 30px;
+          margin-right: 30px;
+          //background-color: lightcoral;
+          padding: 3px 40px 3px 40px;
         }
         .productdetailselecta {
           //osition: absolute;
+          //background-color: lightskyblue;
+          //margin-left: 250px;
+          padding: 3px 40px 3px 40px;
         }
       }
     }
@@ -97,14 +108,14 @@
     .goodtoknow {
       //background-color: sienna;
       width: 577px;
-      height: 50px;
+      height: 30px;
       font-size: 15px;
       margin-bottom: 20px;
     }
   }
 
   .priceinfo {
-    width: 585px;
+    //width: 600px;
     height: 150px;
     //background-color: darkorange;
 
@@ -112,37 +123,37 @@
     .price {
       display: flex;
       //margin-left: 200px;
-      width: 300px;
+      width: 200px;
       height: 50px;
       //background-color: yellowgreen;
       .pricetext {
-        font-size: 15px;
+        font-size: 17px;
       }
       .pricenum {
         margin-left: 60px;
-        font-size: 15px;
+        font-size: 25px;
       }
     }
     .goodsweight {
       display: flex;
-      width: 300px;
+      width: 200px;
       height: 50px;
       //background-color: red;
       .goodsweightext {
-        font-size: 15px;
+        font-size: 17px;
       }
       .goodsweightnum {
         margin-left: 45px;
         font-size: 15px;
       }
     }
-    .overcount {
+    .ordercount {
       //display: flex;
-      width: 300px;
+      width: 200px;
       height: 50px;
       //background-color: green;
       .ordercounttext {
-        font-size: 15px;
+        font-size: 17px;
       }
     }
   }
@@ -150,6 +161,7 @@
   .endprice {
     width: 580px;
     height: 125px;
+    margin-top: 50px;
     //background-color: darkgray;
     border-top: 1px solid #e7e7e7;
 
@@ -162,6 +174,10 @@
       .goods_total_price {
         margin-left: 30px;
         font-size: 30px;
+        margin-top: 5px;
+      }
+      .pricetext {
+        margin-top: 10px;
       }
     }
 
@@ -172,9 +188,13 @@
       height: 30px;
       margin-left: 300px;
       font-size: 20px;
+      .totaltext {
+        margin-top: 10px;
+      }
       .total_price {
         margin-left: 30px;
         font-size: 30px;
+        margin-top: 5px;
       }
     }
   }
