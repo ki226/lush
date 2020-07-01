@@ -4,11 +4,7 @@ import "./Brand.scss";
 class Brand extends Component {
   state = {};
   render() {
-    return (
-      <div className="Brand">
-        <div>Brand</div>
-      </div>
-    );
+    return <div className="Brand"></div>;
   }
 }
 
