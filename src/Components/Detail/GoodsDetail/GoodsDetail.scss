@@ -1,0 +1,322 @@
+.GoodsDetailcontents {
+  width: 1200px;
+  //height: 600px;
+  display: flex;
+  //flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  margin: 0 auto;
+  .mainleft {
+    //width: 505px;
+    //height: 600px;
+    margin-top: 60px;
+    //background-color: darkgoldenrod;
+    //display: flex;
+    //margin: 0 auto;
+    .picturebox {
+      //background-color: yellow;
+      width: 380px;
+      height: 380px;
+      margin: 20px 40px 20px 40px;
+      // .picture {
+      //   width: 380px;
+      //   height: 380px;
+      //   margin: 10px;
+      // }
+    }
+    .picturefootera {
+      //background-color: tomato;
+      width: 379px;
+      height: 150px;
+      .picturefooterimg {
+        //margin-top: 100px;
+        //margin-left: 10px;
+        width: 379px;
+        height: 50px;
+        //background-color: indianred;
+      }
+    }
+  }
+
+  .mainright {
+    .location {
+      display: inline-flex;
+      width: 577px;
+      //height: 50px;
+      margin-top: 60px;
+      margin-bottom: 40px;
+      //height: 52px;
+      //background-color: red;
+      //position: relative;
+      //flex-direction: row-reverse;
+
+      .locationhome {
+        width: 50px;
+        //height: 50px;
+        //background-color: green;
+
+        .home {
+          font-size: 20px;
+          //width: 400px;
+        }
+      }
+      .locationwrap {
+        width: 100%;
+        //background-color: hotpink;
+        .productselect {
+          //width: 100px;
+          //background-color: indigo;
+          padding: 3px 30px 3px 30px;
+        }
+        .productdetailselect {
+          //width: 100px;
+          margin-left: 10px;
+          margin-right: 10px;
+          //background-color: lightcoral;
+          padding: 3px 30px 3px 30px;
+        }
+        .productdetailselecta {
+          //osition: absolute;
+          //background-color: lightskyblue;
+          //margin-left: 250px;
+          padding: 3px 30px 3px 30px;
+        }
+      }
+    }
+    .header_wrapping {
+      width: 100%;
+      height: 100px;
+      .product_h1 {
+        display: flex;
+        width: 100%;
+        height: 70%;
+
+        .productname {
+          font-size: 20px;
+          font-style: solid;
+          //padding-left: 0;
+          //margin-left: 0px;
+          //display: inline;
+          //width: 450px;
+          //height: 20px;
+          margin-right: auto;
+          //background-color: brown;
+        }
+        .product_img {
+          margin-left: auto;
+          justify-content: flex-end;
+        }
+      }
+      .hashtag {
+        //display: flex;
+        //background-color: salmon;
+        //width: 450px;
+        height: 30px;
+      }
+    }
+
+    .inner_right_box {
+      .allreview {
+        //background-color: seagreen;
+        width: 577px;
+        height: 30px;
+        font-size: 15px;
+        border-top: 1px solid #e7e7e7;
+      }
+
+      .goodtoknow {
+        //background-color: sienna;
+        width: 577px;
+        height: 30px;
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+      .priceinfo {
+        //width: 600px;
+        height: 150px;
+        //background-color: darkorange;
+
+        //display: flex;
+        .price {
+          display: flex;
+          //margin-left: 200px;
+          width: 200px;
+          height: 50px;
+          //background-color: yellowgreen;
+          .pricetext {
+            font-size: 17px;
+          }
+          .pricenum {
+            margin-left: 60px;
+            font-size: 25px;
+          }
+        }
+        .goodsweight {
+          display: flex;
+          width: 200px;
+          height: 50px;
+          //background-color: red;
+          .goodsweightext {
+            font-size: 17px;
+          }
+          .goodsweightnum {
+            margin-left: 45px;
+            font-size: 15px;
+          }
+        }
+        .ordercount {
+          //display: flex;
+          width: 200px;
+          height: 50px;
+          //background-color: green;
+          .ordercounttext {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+
+  .endprice {
+    width: 580px;
+    height: 100px;
+    margin-top: 30px;
+    //background-color: darkgray;
+    border-top: 1px solid #e7e7e7;
+
+    .price {
+      display: flex;
+      width: 350px;
+      height: 30px;
+      margin-left: 300px;
+      font-size: 20px;
+      .goods_total_price {
+        margin-left: 30px;
+        font-size: 30px;
+        margin-top: 5px;
+      }
+      .pricetext {
+        margin-top: 10px;
+      }
+    }
+
+    .total {
+      margin-top: 10px;
+      display: flex;
+      width: 350px;
+      height: 30px;
+      margin-left: 300px;
+      font-size: 20px;
+      .totaltext {
+        margin-top: 10px;
+      }
+      .total_price {
+        margin-left: 30px;
+        font-size: 30px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .twobuttons {
+    display: flex;
+    margin-top: 15px;
+    .basketbutton {
+      width: 285px;
+      height: 54px;
+      margin-right: 5px;
+      //background-color: slateblue;
+      border: 1px solid black;
+      .ordertexta {
+        text-align: center;
+        font-size: 15px;
+        margin-top: 15px;
+      }
+    }
+
+    .orderbutton {
+      width: 285px;
+      height: 54px;
+      margin-left: 5px;
+      background-color: black;
+      .ordertext {
+        color: white;
+        text-align: center;
+        font-size: 15px;
+        margin-top: 15px;
+      }
+    }
+  }
+  .naverpay {
+    display: flex;
+    margin-left: 220px;
+    margin-top: 30px;
+    padding-left: 40px;
+    .naverpaytext {
+      width: 120px;
+      margin-right: 3px;
+      //background-color: orange;
+      //border: 1px solid black;
+      padding-left: 10px;
+      .naverpay_text_en {
+        font-size: 7px;
+        font-weight: bolder;
+        color: #00c73c;
+      }
+      .naverpay_text_ko_a {
+        font-size: 2px;
+        padding: 0;
+      }
+      // .naverpay_text_ko_b {
+      //   font-size: 2px;
+      //   padding: 0;
+      // }
+    }
+    .naverbox {
+      width: 150px;
+      height: 37px;
+      background-color: #00c73c;
+      border: 1px solid #00c73c;
+      padding: 5px 10px 2px 30px;
+      display: flex;
+
+      .naver_N_box {
+        width: 30px;
+        height: 25px;
+        background-color: white;
+        display: flex;
+        //margin-top: 5px;
+        //padding-bottom: 5px;
+        //margin-left: 13px;
+        .naver_N {
+          font-size: 25px;
+          font-weight: bolder;
+          color: #00c73c;
+
+          //margin-bottom: 5px;
+          //margin-top: 15px;
+        }
+        .pay_text {
+          font-size: 15px;
+          //margin-bottom: 5px;
+          //margin-left: 35px;
+          color: white;
+        }
+      }
+    }
+    .savebutton {
+      margin-left: 10px;
+      border: 1px solid black;
+      width: 37px;
+      height: 37px;
+      padding: 3px 3px 3px 3px;
+      //font-size: 15px;
+      .save_text {
+        font-size: 14px;
+        color: #00c73c;
+        margin-left: 7px;
+        margin-top: 5px;
+      }
+    }
+  }
+}

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./SignUp.scss";
 
+const SERVER_IP = "http://10.58.2.153:8000";
+
 class SignUp extends Component {
   constructor() {
     super();
@@ -8,7 +10,6 @@ class SignUp extends Component {
       user_id: "",
       password: "",
       confirm_password: "",
-      compare_password: "",
       name: "",
       nickname: "",
       email: "",
@@ -17,8 +18,8 @@ class SignUp extends Component {
     };
   }
 
-  handleInput = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
+  handleInput = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
   };
 
   handleID = (event) => {
@@ -29,11 +30,11 @@ class SignUp extends Component {
 
   //아이디 input 에 값이 입력되는지 확인하는 코드
   handlePassword = (event) => {
-    if (event.keyCode === 9) {
-      this.setState({
-        password: event.target.value,
-      });
-    }
+    // if (event.keyCode === 9) {
+    this.setState({
+      password: event.target.value,
+    });
+    // }
   };
 
   // 비밀번호 input에 값이 입력되는지 확인하는 코드
@@ -128,24 +129,26 @@ class SignUp extends Component {
 
   handleButton = () => {
     // post
-    fetch("http://10.58.5.167:8000/user/signup", {
+    fetch(`${SERVER_IP}/user/signup`, {
       // fetch 인자의 첫 번째 인자는 api 주소고, 두 번째 인자는 객체 형태이고
       method: "POST", // 메소드 뒤에 포스트를 스트링으로 적어줘야 하는데, get은 디폴트 값이 원래 있어서 안 써줘도 됨.
       body: JSON.stringify({
         // body를 json화 시켜서 보내줘야 함. 토큰이 들어오면 json body에 들어옴.
         user_id: this.state.user_id,
         password: this.state.password,
-        confirm_password: this.state.confirm_password,
         name: this.state.name,
         nickname: this.state.nickname,
         email: this.state.email,
         phone_number: this.state.phone_number,
         address: this.state.address,
       }),
-    }).then((res) => res.json());
+    })
+      .then((res) => res.json())
+      .then((res) => console.log("res >>> ", res));
   };
 
   render() {
+    // console.log("state >>>", this.state);
     return (
       <div className="SignUp">
         <div className="title">
@@ -186,10 +189,10 @@ class SignUp extends Component {
                     type="password"
                   />
                   <div className="pwderrormessage">
-                    {this.state.password.length < 10 &&
-                    this.state.password.length > 4
-                      ? "최소 10 이상 입력해주세요."
-                      : ""}
+                    {/* {this.state.password.length < 10
+                      ?  this.state.password.length > 4
+                        "최소 10 이상 입력해주세요."
+                      : ""} */}
                   </div>
                 </div>
                 <div className="box">

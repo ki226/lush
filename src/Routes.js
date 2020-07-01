@@ -18,10 +18,11 @@ import StoreInfo from "Pages/StoreInfo";
 import KakaoTalk from "Components/KakaoTalk";
 import Header from "Components/Header";
 import Footer from "Components/Footer";
-import GoodsInfo from "Components/GoodsInfo";
-import GoodsReview from "Components/GoodsReview";
-import GoodsDetail from "Components/GoodsDetail";
+import GoodsInfo from "Components/Detail/GoodsInfo";
+import GoodsReview from "Components/Detail/GoodsReview";
+import GoodsDetail from "Components/Detail/GoodsDetail";
 import Goods from "Components/Goods";
+import Detail from "Components/Detail/Detail";
 class Routes extends React.Component {
   render() {
     return (
@@ -43,6 +44,7 @@ class Routes extends React.Component {
           <Route exact path="/GoodsReview" component={GoodsReview} />
           <Route exact path="/GoodsDetail" component={GoodsDetail} />
           <Route exact path="/Goods" component={Goods} />
+          <Route exact path="/Detail" component={Detail} />
           <Redirect from="*" to="/" />
         </Switch>
         <Footer />
