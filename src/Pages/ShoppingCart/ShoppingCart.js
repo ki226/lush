@@ -3,22 +3,28 @@ import CartSection from "Components/CartSection";
 import "./ShoppingCart.scss";
 
 class ShoppingCart extends Component {
-  state = { isMember: false, items: [], loading: true };
+  state = { isMember: false, items: [] };
 
   componentDidMount() {
-    fetch(process.env.PUBLIC_URL + "cartData.json")
-      .then((res) => res.json())
-      .then((data) =>
-        this.setState({ isMember: data.isMember, items: data.items })
-      )
-      .catch((error) => console.log("Error occurred", error))
-      .finally(() => this.setState({ loading: false }));
+    this.loadData();
   }
 
-  counterHandler = (goods_no, sign) => {
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.items.length !== this.state.items.length) {
+      this.loadData();
+    }
+  }
+
+  loadData = () => {
+    let items = sessionStorage.getItem("items");
+    items = items ? JSON.parse(items) : [];
+    this.setState({ isMember: true, items });
+  };
+
+  counterHandler = (product_number, sign) => {
     const { items } = this.state;
     const newItems = items.map((item) => {
-      if (item.goods_no !== goods_no) {
+      if (item.product_number !== product_number) {
         return item;
       } else {
         return sign === "+"
@@ -31,10 +37,12 @@ class ShoppingCart extends Component {
     this.setState({ items: newItems });
   };
 
-  checkboxHandler = (goods_no) => {
+  checkboxHandler = (product_number) => {
     const { items } = this.state;
     const newItems = items.map((item) =>
-      item.goods_no !== goods_no ? item : { ...item, selected: !item.selected }
+      item.product_number !== product_number
+        ? item
+        : { ...item, selected: !item.selected }
     );
     this.setState({ items: newItems });
   };
@@ -53,12 +61,18 @@ class ShoppingCart extends Component {
       .reduce((acc, curr) => acc + curr);
     const result = window.confirm(
       numberOfItems !== 0
-        ? `선택하신 ${numberOfItems}개상품을 장바구니에서 삭제 하시겠습니다.`
+        ? `선택하신 ${Number(
+            numberOfItems
+          )}개상품을 장바구니에서 삭제 하시겠습니다.`
         : "선택하신 상품이 없습니다."
     );
     if (result) {
       const newItems = items.filter((item) => item.selected !== true);
       this.setState({ items: newItems });
+      sessionStorage.setItem(
+        "items",
+        JSON.stringify(newItems.map((item) => ({ ...item, selected: true })))
+      );
     }
   };
 
@@ -76,8 +90,8 @@ class ShoppingCart extends Component {
   };
 
   render() {
-    const { loading, isMember, items } = this.state;
-    return loading ? null : (
+    const { isMember, items } = this.state;
+    return (
       <div className="ShoppingCart">
         <div className="header">
           <h2 className="heading">SHOPPING CART</h2>

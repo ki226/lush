@@ -24,6 +24,7 @@ class GoodsList extends Component {
   };
 
   render() {
+    console.log(this.state);
     const { productList, counts, categoryCode } = this.props;
     return (
       <div className="GoodsList">
@@ -40,7 +41,11 @@ class GoodsList extends Component {
             <li key={count.category_code}>
               <span>
                 <Link
-                  to={`/product?category_code=${count.category_code}`}
+                  to={
+                    categoryCode.length === 6
+                      ? `product?page=1&categoryCode=${count.category_code}`
+                      : `product?page=1&subCategoryCode=${count.category_code}`
+                  }
                   className={count.category_code === categoryCode ? "on" : null}
                 >
                   {count.category_code.length === 6
