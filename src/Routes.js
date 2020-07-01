@@ -10,7 +10,7 @@ import Login from "Pages/Login";
 import Brand from "Pages/Brand";
 import Event from "Pages/Event";
 import MyPage from "Pages/MyPage";
-import Product from "Pages/Product";
+// import Product from "Pages/Product";
 import ShoppingCart from "Pages/ShoppingCart";
 import SignUp from "Pages/SignUp";
 import Spa from "Pages/Spa";
@@ -30,7 +30,7 @@ class Routes extends React.Component {
           <Route exact path="/brand" component={Brand} />
           <Route exact path="/event" component={Event} />
           <Route exact path="/mypage" component={MyPage} />
-          <Route exact path="/product" component={Product} />
+          {/* <Route exact path="/product" component={Product} /> */}
           <Route exact path="/shoppingcart" component={ShoppingCart} />
           <Route exact path="/spa" component={Spa} />
           <Route exact path="/storeinfo" component={StoreInfo} />
