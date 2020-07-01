@@ -11,5 +11,32 @@
       font-size: 42px;
       padding-bottom: 80px;
     }
+    .view-select {
+      padding: 45px 0 45px 0;
+      ul {
+        display: flex;
+        justify-content: space-around;
+        font-size: 16px;
+
+        .all-event,
+        .current-event,
+        .end-event {
+          cursor: pointer;
+        }
+
+        .all-event {
+          margin-left: 400px;
+          border-right: 1px solid;
+          padding-right: 20px;
+          color: #8f8f8f;
+        }
+        .end-event {
+          margin-right: 400px;
+          border-left: 1px solid;
+          padding-left: 20px;
+          color: #8f8f8f;
+        }
+      }
+    }
   }
 }

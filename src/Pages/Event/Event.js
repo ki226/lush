@@ -29,7 +29,7 @@ class Event extends Component {
         ? stores
         : searchBy === SEARCH_BY_LIST[0]
         ? stores.filter((store) => store.name.includes(searchTerm))
-        : stores; // SEARCH_BY_LIST[1] 내용인 경우 필터링 추가 필요
+        : stores;
 
     this.setState({ searchResult: filteredStores });
   };
@@ -49,10 +49,12 @@ class Event extends Component {
             searchByHandler={this.searchByHandler}
             searchHandler={this.searchHandler}
           />
-          <div className="viewSelect">
-            <p>
-              전체(45) <b>| 진행중 이벤트(5) |</b> 종료한 이벤트(40)
-            </p>
+          <div className="view-select">
+            <ul>
+              <li className="all-event">전체(45) </li>
+              <li className="current-event">진행중 이벤트(2)</li>
+              <li className="end-event">종료된 이벤트(43)</li>
+            </ul>
           </div>
         </div>
       </div>
