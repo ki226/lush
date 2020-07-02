@@ -7,7 +7,7 @@ class SearchPop extends Component {
     return (
       <div
         className={`SearchPop ${
-          this.props.menuOpen === 3 ? "menu-show" : "menu-hide"
+          this.props.activeTab === 3 ? "menu-show" : "menu-hide"
         }`}
       >
         <button className="close-btn" onClick={this.props.menuHide}></button>
