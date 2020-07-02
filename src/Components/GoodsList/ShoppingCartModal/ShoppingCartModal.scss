@@ -1,0 +1,156 @@
+$color-font-gray: #8f8f8f;
+
+.ShoppingCartModal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  &.on {
+    display: flex;
+  }
+
+  .modal-container {
+    width: 540px;
+    height: 370px;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 15px;
+
+    .heading {
+      font-size: 22px;
+    }
+
+    .button-close {
+      width: 18px;
+      height: 18px;
+      background-image: url("./Images/close.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    flex-grow: 1;
+    display: flex;
+    padding: 20px 0;
+
+    .image {
+      flex-basis: 135px;
+      flex-shrink: 0;
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .info {
+      flex-grow: 1;
+      flex-shrink: 0;
+
+      .text {
+        padding-bottom: 18px;
+        border-bottom: 1px solid #e7e7e7;
+
+        .name {
+          font-size: 16px;
+          padding-bottom: 6px;
+        }
+        .tags {
+          font-size: 14px;
+          font-weight: lighter;
+          color: $color-font-gray;
+        }
+      }
+    }
+
+    .sales {
+      padding-top: 18px;
+      padding-right: 10px;
+      display: flex;
+      justify-content: space-between;
+
+      .price {
+        font-size: 14px;
+      }
+    }
+
+    .button-count {
+      width: 122px;
+      display: flex;
+      justify-content: center;
+      border: 1px solid #e7e7e7;
+
+      .count {
+        width: 44px;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      button {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+
+        &.countDown {
+          background-image: url("./Images/count_down.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          font-size: 0px;
+        }
+
+        &.countUp {
+          background-image: url("./Images/count_up.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          font-size: 0px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    flex: 0 0 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #e7e7e7;
+
+    button {
+      font-size: 14px;
+      width: 160px;
+      height: 55px;
+      border: 1px solid #000;
+      text-align: center;
+      cursor: pointer;
+
+      &.button-cancel {
+        margin-right: 20px;
+      }
+
+      &.button-add {
+        color: #fff;
+        background-color: #000;
+      }
+    }
+  }
+}
