@@ -25,6 +25,7 @@
         line-height: 24px;
         padding-left: 8px;
         font-size: 14px;
+        color: #afb1af;
       }
       p {
         margin-top: 15px;
@@ -116,9 +117,50 @@
           color: white;
           font-size: 12px;
           font-weight: bold;
+          cursor: pointer;
+        }
+
+        .add-address:hover {
+          background-color: #717171;
         }
       }
-      //   .address
+    }
+    .address-info {
+      padding-bottom: 20px;
+      margin-top: 20px;
+      display: flex;
+      text-align: center;
+      border-bottom: 1px solid #afb1af;
+
+      .address-name {
+        // margin-left: -170px;
+        width: 82px;
+      }
+
+      .recieve-user-name {
+        // margin-left: -320px;
+        width: 82px;
+      }
+
+      .address {
+        width: 625px;
+      }
+
+      .phone-number {
+        // margin-right: -300px;
+        width: 125px;
+      }
+
+      .address-delete {
+        // margin-right: -160px;
+        width: 95px;
+      }
+      p {
+        font-size: 14px;
+        color: #8f8f8f;
+      }
+    }
+    .address-list {
     }
   }
 }
