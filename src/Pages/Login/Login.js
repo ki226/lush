@@ -78,11 +78,7 @@ class Login extends Component {
                             onChange={this.handleID}
                             type="text"
                             className="loginId_text"
-                            //name="loginId_text"
-                            //value="아이디"
                             placeholder="아이디"
-                            // required="true"
-                            // aria-required="true"
                           />
                         </div>
                         <div>
@@ -95,11 +91,7 @@ class Login extends Component {
                               onKeyPress={this.handlePasswordEnter}
                               type="password"
                               className="loginPwd_text"
-                              //name="loginPwd"
-                              //value=""
                               placeholder="비밀번호"
-                              //required="true"
-                              //aria-required="true"
                             />
                           </div>
                         </div>
@@ -108,11 +100,12 @@ class Login extends Component {
                         <input
                           type="checkbox"
                           className="checkbox"
-                          //name="saveId"
-                          value=""
-                          checked=""
+                          value="y"
+                          aria-invalid="false"
                         />
-                        <div className="on">아이디 저장</div>
+                        <label for="maillingFl" className="on">
+                          아이디 저장
+                        </label>
                       </div>
                       <button
                         onClick={this.handleButton}
@@ -134,16 +127,12 @@ class Login extends Component {
                       </div>
                     </div>
                     <div className="naverloginbox">
-                      {/* <div className="naverlogin"> */}
-                      {/* href="#"
-                        data-naver-url="https://socialmember.godo.co.kr/NaverLogin/naver_api.php?mode=login&amp;response_type=code&amp;client_id=0Q8wjCNa7cJS0AvkCJEQ&amp;redirect_uri=https%3A%2F%2Flush.co.kr%2F&amp;state=9a9b87f8cf176066bf8e9c73ee6222b3" */}
                       <img
                         src={logo_naver_n}
                         className="naverlogoimg"
                         alt="네이버"
                       />
                       <p className="naverlogintext">네이버 아이디로 로그인</p>
-                      {/* </div> */}
                     </div>
                   </div>
                 </div>

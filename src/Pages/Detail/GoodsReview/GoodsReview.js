@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./GoodsReview.scss";
+// import data from "../../../../public/data/detailData.json";
 
 class GoodsReview extends Component {
   state = {};
@@ -14,13 +15,13 @@ class GoodsReview extends Component {
           <div className="plusreviewphoto">
             <div className="plusreviewphototext">
               <span className="text">포토리뷰 모아보기</span>
-              <div className="imgbox">
-                <div className="imgboxa"></div>
-                <div className="imgboxa"></div>
-                <div className="imgboxa"></div>
-                <div className="imgboxa"></div>
-                <div className="imgboxa"></div>
-              </div>
+            </div>
+            <div className="plusreview_img">
+              <div className="imgboxa"></div>
+              <div className="imgboxa"></div>
+              <div className="imgboxa"></div>
+              <div className="imgboxa"></div>
+              <div className="imgboxa"></div>
             </div>
           </div>
           <div className="starscores">
@@ -28,15 +29,15 @@ class GoodsReview extends Component {
               <div className="aligntext">
                 <div className="text">평가</div>
                 <div className="number">4.2</div>
-                <div className="stars">별자리</div>
+                <div className="stars">★★★★</div>
               </div>
             </div>
             <div className="thenumberofreview">
               <div className="scoresb">
                 <div className="aligntextb">
                   <div className="registerreview">
-                    <div classname="registerreviewtext">리뷰등록</div>
-                    <div classname="registerrevviewnum">10건</div>
+                    <div className="registerreviewtext">리뷰등록</div>
+                    <div className="registerrevviewnum">10건</div>
                   </div>
                   <div className="photoreview">
                     <div className="photoreviewtext">포토리뷰</div>

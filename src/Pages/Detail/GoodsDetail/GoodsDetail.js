@@ -1,32 +1,33 @@
 import React, { Component } from "react";
 import "./GoodsDetail.scss";
+import "../../../../public/data";
 // import naverpaycapture from "./Images/naverpaycapture.png";
 
 class GoodsDetail extends Component {
   render() {
     const {
-      picture,
-      productname,
-      hashtag,
-      pricenum,
-      goodsweightnum,
+      image,
+      product_name,
+      hash_tag,
+      price,
+      weight,
       goods_total_price,
       total_price,
     } = this.props; //부모컴포넌트에서 프롭스로 받겠다.
 
     // 객체 비구조화 할당
-    // this.props.pricenum
-    // const { pricenum } = this.props;
-
+    // this.props  price
+    // const {  price } = this.props;
+    console.log(this.props);
     return (
       <div className="GoodsDetailcontents">
         <div className="mainleft">
           <div className="picturebox">
-            <img src={picture} className="picture" alt="메인사진" />
+            <img src={image} className="image" alt="메인사진" />
           </div>
           <div className="picturefootera">
             <img
-              src={picture}
+              src={image}
               className="picturefooterimg"
               alt="하단메인이미지"
             />
@@ -38,7 +39,7 @@ class GoodsDetail extends Component {
               <span className="home">홈</span>
             </div>
             <div className="locationwrap">
-              <span className="home"> </span>
+              <span className="home"> ➤</span>
               <select
                 className="productselect"
                 aria-required="true"
@@ -48,7 +49,7 @@ class GoodsDetail extends Component {
                 <option>러쉬</option>
                 <option>LUSH SPA</option>
               </select>
-              <span className="home"> </span>
+              <span className="home"> ➤ </span>
               <select
                 className="productdetailselect"
                 aria-required="true"
@@ -66,7 +67,7 @@ class GoodsDetail extends Component {
                 <option>퍼퓸</option>
                 <option>기프트</option>
               </select>
-              <span className="home"> </span>
+              <span className="home"> ➤</span>
               <select
                 className="productdetailselecta"
                 aria-required="true"
@@ -81,10 +82,9 @@ class GoodsDetail extends Component {
               </select>
             </div>
           </div>
-          <div classname="header_wrapping">
-            {" "}
+          <div className="header_wrapping">
             <div className="product_h1">
-              <div className="productname">{productname}</div>
+              <div className="product_name">{product_name}</div>
               <div className="product_img">
                 {/* <img
                   src="/data/skin/front/howling/img/etc/bl_arrow.png"
@@ -93,7 +93,7 @@ class GoodsDetail extends Component {
                 <img src="" alt="하트" /> */}
               </div>
             </div>
-            <div className="hashtag">{hashtag}</div>
+            <div className="hash_tag">{hash_tag}</div>
           </div>
 
           <div className="inner_right_box">
@@ -102,58 +102,30 @@ class GoodsDetail extends Component {
             <div className=" priceinfo">
               <div className="price">
                 <div className="pricetext">판매가</div>
-                <div className="pricenum">₩{pricenum}</div>
+                <div className="price">₩ {price}</div>
               </div>
               <div className="goodsweight">
                 <div className="goodsweightext">상품무게</div>
-                <div className="goodsweightnum">{goodsweightnum}g</div>
+                <div className="weight">{weight}g</div>
               </div>
 
               <div className="ordercount">
                 <div className="ordercounttext">구매수량</div>
-                <div className="button_box"></div>
+                <div className="buttonbody">
+                  <button className="count" onClick={this.props.minus}>
+                    -
+                  </button>
+                  <div className="countbox">
+                    <p className="countbox_text">{this.props.num}</p>
+                  </div>
+
+                  <button className="count" onClick={this.props.plus}>
+                    +
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-
-          {/* <span className="count">
-                <button
-                  type="button"
-                  className="downcount"
-                  title="감소"
-                  value="dn^|^0"
-                  // style="cursor:pointer"
-                >
-                  -
-                </button>
-
-                <input
-                  type="text"
-                  className="countbtn"
-                  title="수량"
-                  data-key="0"
-                  name="goodscnt[]"
-                  value="1"
-                  data-value="1"
-                  data-stock="0"
-                  onchange="goodsViewController.input_count_change(this,'1');return false;"
-                />
-
-                <button
-                  type="button"
-                  className="upcount"
-                  title="증가"
-                  value="up^|^0"
-                  // style="cursor:pointer"
-                >
-                  +
-                </button>
-              </span> */}
-          {/* <p>
-                <input type="hidden" value="0" name="optionPriceSum[]" />
-                <input type="hidden" value="0.00" name="option_price_0" />$
-                <strong class="option_price_display_0">12,000</strong>
-              </p> */}
 
           <div className="endprice">
             <ul>
@@ -161,10 +133,7 @@ class GoodsDetail extends Component {
                 <span className="pricetext">총 제품 금액</span>
                 <span className="goods_total_price">₩{goods_total_price}</span>
               </li>
-              {/* <li className="discounton">
-                    <span>총 할인 금액</span>
-                    <strong className="total_benefit_price"></strong>
-                  </li> */}
+
               <li className="total">
                 <span className="totaltext">총 합계 금액</span>
                 <span className="total_price">₩{total_price}</span>
@@ -183,7 +152,6 @@ class GoodsDetail extends Component {
             <div className="naverpaytext">
               <p className="naverpay_text_en">NAVER</p>
               <p className="naverpay_text_ko_a">네이버ID로 간편구매</p>
-              {/* <p className="naverpay_text_ko_b">네이버페이</p> */}
             </div>
             <div className="naverbox">
               <div className="naver_N_box">
@@ -193,7 +161,6 @@ class GoodsDetail extends Component {
             </div>
             <div className="savebutton">
               <p className="save_text">찜</p>
-              {/* <img src={naverpaycapture} alt="찜" /> */}
             </div>
           </div>
         </div>

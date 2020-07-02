@@ -18,11 +18,12 @@ import StoreInfo from "Pages/StoreInfo";
 import KakaoTalk from "Components/KakaoTalk";
 import Header from "Components/Header";
 import Footer from "Components/Footer";
-import GoodsInfo from "Components/Detail/GoodsInfo";
-import GoodsReview from "Components/Detail/GoodsReview";
-import GoodsDetail from "Components/Detail/GoodsDetail";
+import GoodsInfo from "Pages/Detail/GoodsInfo";
+// import GoodsInfo from "Components/GoodsInfo";
+import GoodsReview from "Pages/Detail/GoodsReview";
+import GoodsDetail from "Pages/Detail/GoodsDetail";
 import Goods from "Components/Goods";
-import Detail from "Components/Detail/Detail";
+import Detail from "Pages/Detail/Detail";
 class Routes extends React.Component {
   render() {
     return (
