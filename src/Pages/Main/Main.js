@@ -14,6 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Main.scss";
 import "../../Styles/reset.scss";
 import { DATA_PATH } from "config";
+import Header from "Components/Header";
 
 class Main extends Component {
   state = {
@@ -72,6 +73,7 @@ class Main extends Component {
 
     return (
       <div className="Main">
+        {/* <Header /> */}
         <TopSlider />
         <div className="middle-slide">
           <div className="middle-slide-form">

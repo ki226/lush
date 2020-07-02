@@ -21,15 +21,10 @@ class Header extends Component {
   };
 
   menuUp = (e) => {
-    console.log(e.target);
-    this.setState(
-      {
-        activeTab: null,
-      },
-      () => {
-        console.log(this.state.activeTab);
-      }
-    );
+    e.stopPropagation();
+    this.setState({
+      activeTab: null,
+    });
   };
 
   render() {
@@ -89,7 +84,7 @@ class Header extends Component {
                 <img className="main-icon" src={topSearchIcon} alt="search" />
                 <SearchPop
                   menuHide={this.menuUp}
-                  menuOpen={this.state.activeTab}
+                  activeTab={this.state.activeTab}
                 />
               </li>
               <Link to="/shoppingCart">
