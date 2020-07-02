@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import Aside from "Components/Aside";
 import TopSlider from "Components/TopSlider";
 import MainUnderContents from "Components/MainUnderContents";
+import MiddleSlide from "Components/MiddleSlide";
 import overImage from "./Images/media_form_img.gif";
 import underImageleft from "./Images/media_form_img2.jpg";
 import underImageRight from "./Images/media_form_img3.jpg";
@@ -11,9 +12,23 @@ import spaImage from "./Images/spa.gif";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Main.scss";
+import "../../Styles/reset.scss";
+import { DATA_PATH } from "config";
 
 class Main extends Component {
-  state = {};
+  state = {
+    slideData: [],
+  };
+
+  componentDidMount() {
+    fetch(DATA_PATH + "sliderdata.json")
+      .then((res) => res.json())
+      .then((res) =>
+        this.setState({
+          slideData: res.slideData,
+        })
+      );
+  }
 
   render() {
     const settings = {
@@ -33,6 +48,7 @@ class Main extends Component {
               width: "14px",
               position: "absolute",
               display: "flex",
+              marginLeft: "-55px",
             }}
           >
             {dots}
@@ -52,6 +68,8 @@ class Main extends Component {
         ></div>
       ),
     };
+    const { slideData } = this.state;
+
     return (
       <div className="Main">
         <TopSlider />
@@ -60,102 +78,9 @@ class Main extends Component {
             <h1 className="middle-slide-title">나만 알고 싶은 향기</h1>
             <div className="all-slide-list">
               <Slider className="slider" {...settings}>
-                <div className="product-form">
-                  <img className="product-img" src={slideImage}></img>
-                  <div className="slide-info">
-                    <p className="product-name">sample</p>
-                    <p className="hash-tag">sample</p>
-                    <p className="price">￦10,000</p>
-                  </div>
-                </div>
-                <div className="product-form">
-                  <img className="product-img" src={slideImage}></img>
-                  <div className="slide-info">
-                    <p className="product-name">sample</p>
-                    <p className="hash-tag">sample</p>
-                    <p className="price">￦10,000</p>
-                  </div>
-                </div>
-                <div className="product-form">
-                  <img className="product-img" src={slideImage}></img>
-                  <div className="slide-info">
-                    <p className="product-name">sample</p>
-                    <p className="hash-tag">sample</p>
-                    <p className="price">￦10,000</p>
-                  </div>
-                </div>
-                <div className="product-form">
-                  <img className="product-img" src={slideImage}></img>
-                  <div className="slide-info">
-                    <p className="product-name">sample</p>
-                    <p className="hash-tag">sample</p>
-                    <p className="price">￦10,000</p>
-                  </div>
-                </div>
-                <div className="product-form">
-                  <img className="product-img" src={slideImage}></img>
-                  <div className="slide-info">
-                    <p className="product-name">sample</p>
-                    <p className="hash-tag">sample</p>
-                    <p className="price">￦10,000</p>
-                  </div>
-                </div>
-                <div className="product-form">
-                  <img className="product-img" src={slideImage}></img>
-                  <div className="slide-info">
-                    <p className="product-name">sample</p>
-                    <p className="hash-tag">sample</p>
-                    <p className="price">￦10,000</p>
-                  </div>
-                </div>
-                <div className="product-form">
-                  <img className="product-img" src={slideImage}></img>
-                  <div className="slide-info">
-                    <p className="product-name">sample</p>
-                    <p className="hash-tag">sample</p>
-                    <p className="price">￦10,000</p>
-                  </div>
-                </div>
-                <div className="product-form">
-                  <img className="product-img" src={slideImage}></img>
-                  <div className="slide-info">
-                    <p className="product-name">sample</p>
-                    <p className="hash-tag">sample</p>
-                    <p className="price">￦10,000</p>
-                  </div>
-                </div>
-                <div className="product-form">
-                  <img className="product-img" src={slideImage}></img>
-                  <div className="slide-info">
-                    <p className="product-name">sample</p>
-                    <p className="hash-tag">sample</p>
-                    <p className="price">￦10,000</p>
-                  </div>
-                </div>
-                <div className="product-form">
-                  <img className="product-img" src={slideImage}></img>
-                  <div className="slide-info">
-                    <p className="product-name">sample</p>
-                    <p className="hash-tag">sample</p>
-                    <p className="price">￦10,000</p>
-                  </div>
-                </div>
-                <div className="product-form">
-                  <img className="product-img" src={slideImage}></img>
-                  <div className="slide-info">
-                    <p className="product-name">sample</p>
-                    <p className="hash-tag">sample</p>
-                    <p className="price">￦10,000</p>
-                  </div>
-                </div>
-                <div className="product-form">
-                  <img className="product-img" src={slideImage}></img>
-                  <div className="slide-info">
-                    <p className="product-name">sample</p>
-                    <p className="hash-tag">sample</p>
-                    <p className="price">￦10,000</p>
-                  </div>
-                </div>
+                {slideData.map((slider, idx) => (
+                  <MiddleSlide key={idx} slideData={slider} />
+                ))}
               </Slider>
             </div>
             <Aside className="Aside" />
