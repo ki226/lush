@@ -1,7 +1,7 @@
 .SignUp {
   width: 1200px;
   height: 1100px;
-  //display: rel                                                                                                                  ative;
+  //display: rel
   padding-top: 50px;
   //background-color: blue;
   //margin-left: 400px;
@@ -73,70 +73,135 @@
           //margin-top: 30px;
           //float: left;
         }
-      }
 
-      .form {
-        width: 1080px;
-        height: 600px;
-        margin-top: 30px;
-        //background-color: darkkhaki;
-        .box {
-          width: 1000px;
-          height: 40px;
-          display: flex;
-          margin-bottom: 20px;
-          //background-color: darkkhaki;
-          .text {
-            font-size: 14px;
-            //background-color: darkorange;
-            width: 120px;
-            height: 40px;
-            margin-left: 30px;
-          }
-
-          .inputbox {
-            width: 403px;
-            height: 38px;
-            margin-left: 120px;
-            //background-color: darkmagenta;
-          }
-          .inputboxa {
-            width: 250px;
-            height: 38px;
-            margin-left: 120px;
-          }
-          .inputboxb {
-            width: 145px;
-            height: 38px;
-            margin-left: 10px;
-          }
-        }
-        // .addressbox {
-        //   width: 1000px;
-        //   height: 100px;
-        //   background-color: darkorchid;
-        // }
-        // .inputboxc {
-        //   width: 155px;
-        //   height: 38px;
-        //   margin-left: 120px;
-        // }
-        .buttonbox {
+        .form {
           width: 1080px;
-          height: 50px;
-          border-bottom: 1px solid black;
+          height: 600px;
+          margin-top: 30px;
+          //background-color: darkkhaki;
+          .box {
+            width: 1000px;
+            height: 40px;
+            display: flex;
+            margin-bottom: 20px;
+            //background-color: darkkhaki;
+            .text {
+              font-size: 16px;
+              //background-color: darkorange;
+              width: 120px;
+              height: 40px;
+              margin-left: 10px;
+            }
+
+            .text_nick {
+              margin-left: 30px;
+              width: 120px;
+              height: 40px;
+              font-size: 16px;
+            }
+            .agree_checkbox {
+              margin-left: 15px;
+              margin-top: 3px;
+            }
+
+            .inputbox {
+              width: 403px;
+              height: 38px;
+              margin-left: 120px;
+              //background-color: darkmagenta;
+            }
+            .inputboxa {
+              width: 250px;
+              height: 38px;
+              margin-left: 120px;
+            }
+            .email_select {
+              width: 142px;
+              height: 40px;
+              margin-left: 10px;
+            }
+          }
+          .addressbox {
+            width: 1000px;
+            height: 100px;
+            //background-color: red;
+            //display: flex;
+            border-bottom: 1px solid rgb(49, 49, 49);
+            .addressboxa {
+              display: flex;
+              //width: 900;
+              height: 40px;
+              //background-color: yellowgreen;
+              .text_address {
+                margin-left: 30px;
+                width: 120px;
+                height: 40px;
+                font-size: 16px;
+              }
+              .inputboxa {
+                width: 250px;
+                height: 38px;
+                //background-color: yellow;
+                //height: 38px;
+                margin-left: 120px;
+              }
+              .text {
+                font-size: 14px;
+                //background-color: darkorange;
+                width: 120px;
+                height: 40px;
+                margin-left: 30px;
+              }
+            }
+
+            .searchfor_zip_box {
+              width: 200px;
+              .searchfor_zip {
+                width: 145px;
+                height: 38px;
+                margin-left: 10px;
+                border: 1px solid rgb(39, 38, 38);
+                border-radius: 3px;
+                //background-color: blueviolet;
+                .searchfor_zip_text {
+                  text-align: center;
+                  padding-top: 8px;
+                  font-size: 12px;
+                }
+              }
+            }
+            .addressboxb {
+              width: 700px;
+              height: 25px;
+              margin-left: 270px;
+              //background-color: yellowgreen;
+              .inputboxc {
+                width: 300px;
+                height: 40px;
+              }
+            }
+          }
         }
-        .loginbtn {
-          width: 279px;
-          height: 57px;
-          margin-left: 320px;
-          margin-top: 150px;
-          //margin: 0 auto;
-          //text-align: center;
+
+        .buttonbox {
+          .loginbtn {
+            width: 279px;
+            height: 57px;
+            margin-left: 320px;
+            //margin-top: 50px;
+            background-color: rgb(41, 39, 39);
+            //margin: 0 auto;
+            //text-align: center;
+            .signup_text {
+              font-size: 17px;
+              color: white;
+            }
+          }
         }
-        .addressbox {
-          margin-left: 260px;
-        }
+
+        // .addressbox {
+        //   margin-left: 260px;
+        // }
       }
     }
   }

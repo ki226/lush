@@ -19,7 +19,7 @@ class PriceBox extends Component {
       items.filter((item) => item.selected === true).length > 0
         ? items
             .filter((item) => item.selected === true)
-            .map((item) => item.count * item.goods_price)
+            .map((item) => item.count * item.price)
             .reduce((acc, curr) => acc + curr)
         : 0;
 
