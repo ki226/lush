@@ -45,7 +45,7 @@ class Table extends Component {
         <tbody>
           {items.map((item, index) => (
             <TableRow
-              key={item.goods_no}
+              key={item.product_number}
               item={item}
               deliveryCharge={deliveryCharge}
               counterHandler={counterHandler}
