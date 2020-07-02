@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import "./AddAddress.scss";
 
 class AddAddress extends Component {
-  state = {};
   render() {
+    const { menuShow, menuHide } = this.props;
     return (
       <div
         className={`AddAddress ${
-          this.props.menuShow === 0 ? "AddAdress" : "AddAddress-hide"
+          menuShow === 0 ? "AddAdress" : "AddAddress-hide"
         }`}
       >
         <div className="add-address-container">
@@ -73,10 +73,10 @@ class AddAddress extends Component {
             </div>
             <div className="last-btn">
               <div className="cancel-btn">
-                <button onClick={this.props.menuHide}>취소</button>
+                <button onClick={menuHide}>취소</button>
               </div>
               <div className="save-btn">
-                <button onClick={this.props.menuHide}>저장</button>
+                <button onClick={menuHide}>저장</button>
               </div>
             </div>
           </div>

@@ -7,22 +7,23 @@ class MyPage extends Component {
     menuShow: null,
   };
 
-  menuHandle = (id) => {
+  showSelectedMenu = (id) => {
     this.setState({
       menuShow: id,
     });
   };
 
-  menuHide = () => {
+  HideMenu = () => {
     this.setState({
       menuShow: null,
     });
   };
 
   render() {
+    const { menuShow } = this.state;
     return (
       <>
-        <AddAddress menuShow={this.state.menuShow} menuHide={this.menuHide} />
+        <AddAddress menuShow={menuShow} menuHide={this.HideMenu} />
 
         <div className="MyPage">
           <div className="mypage-container">
@@ -110,7 +111,7 @@ class MyPage extends Component {
                   </div>
                   <button
                     className="add-address"
-                    onClick={() => this.menuHandle(0)}
+                    onClick={() => this.showSelectedMenu(0)}
                   >
                     + 새 배송지 추가
                   </button>
