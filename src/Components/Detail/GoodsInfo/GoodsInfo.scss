@@ -22,12 +22,12 @@
         height: 45px;
         border: none;
         //background-color: blue;
-        border-left: 3px solid black;
-        border-top: 3px solid black;
-        border-right: 3px solid black;
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+        border-right: 1px solid black;
 
         .ona {
-          font-size: 25px;
+          font-size: 20px;
           //position: absolute;
           //margin-right: 30px;
           //border-right: 1px solid black;
@@ -42,11 +42,11 @@
         height: 45px;
         //background-color: green;
         border: none;
-        border-bottom: 3px solid black;
+        border-bottom: 1px solid black;
         border-top: 2px solid rgb(156, 154, 154);
         border-right: 2px solid rgb(156, 154, 154);
         .onb {
-          font-size: 25px;
+          font-size: 20px;
 
           display: table;
           margin-left: auto;
@@ -57,12 +57,12 @@
         width: 392px;
         height: 45px;
         border: none;
-        border-bottom: 3px solid black;
+        border-bottom: 1px solid black;
         border-top: 2px solid rgb(156, 154, 154);
         border-right: 2px solid rgb(156, 154, 154);
         //background-color: hotpink;
         .onc {
-          font-size: 25px;
+          font-size: 20px;
 
           display: table;
           margin-left: auto;
@@ -88,6 +88,41 @@
       width: 1180px;
       height: 300px;
       margin-top: 30px;
+    }
+    .product_inner_name {
+      width: 1180px;
+      height: 116px;
+
+      //background-color: lime;
+
+      .product_category {
+        width: 1180px;
+        height: 35px;
+        padding-top: 10px;
+        font-size: 15px;
+        text-align: text;
+        //background-color: limegreen;
+      }
+      .product_title {
+        width: 1180px;
+        height: 81px;
+        //background-color: magenta;
+        .product_title_kor {
+          width: 1180px;
+          height: 50px;
+          font-size: 30px;
+          font-weight: bold;
+          padding-top: 5px;
+          text-align: center;
+          //background-color: mediumblue;
+        }
+        .product_title_en {
+          widht: 1180px;
+          height: 30px;
+          font-size: 18px;
+          text-align: center;
+        }
+      }
     }
   }
 }

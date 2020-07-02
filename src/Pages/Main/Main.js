@@ -9,6 +9,7 @@ import underImageleft from "./Images/media_form_img2.jpg";
 import underImageRight from "./Images/media_form_img3.jpg";
 import slideImage from "./Images/slide_image.jpg";
 import spaImage from "./Images/spa.gif";
+import KakaoTalk from "../../Components/KakaoTalk/KakaoTalk";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Main.scss";
@@ -72,6 +73,7 @@ class Main extends Component {
 
     return (
       <div className="Main">
+        <KakaoTalk />
         <TopSlider />
         <div className="middle-slide">
           <div className="middle-slide-form">

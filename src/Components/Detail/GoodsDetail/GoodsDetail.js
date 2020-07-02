@@ -22,10 +22,14 @@ class GoodsDetail extends Component {
       <div className="GoodsDetailcontents">
         <div className="mainleft">
           <div className="picturebox">
-            <img src={picture} className={picture} alt="메인사진" />
+            <img src={picture} className="picture" alt="메인사진" />
           </div>
           <div className="picturefootera">
-            <img src="" className="picturefooterimg" alt="하단메인이미지" />
+            <img
+              src={picture}
+              className="picturefooterimg"
+              alt="하단메인이미지"
+            />
           </div>
         </div>
         <div className="mainright">
@@ -34,6 +38,7 @@ class GoodsDetail extends Component {
               <span className="home">홈</span>
             </div>
             <div className="locationwrap">
+              <span className="home"> </span>
               <select
                 className="productselect"
                 aria-required="true"
@@ -43,6 +48,7 @@ class GoodsDetail extends Component {
                 <option>러쉬</option>
                 <option>LUSH SPA</option>
               </select>
+              <span className="home"> </span>
               <select
                 className="productdetailselect"
                 aria-required="true"
@@ -60,6 +66,7 @@ class GoodsDetail extends Component {
                 <option>퍼퓸</option>
                 <option>기프트</option>
               </select>
+              <span className="home"> </span>
               <select
                 className="productdetailselecta"
                 aria-required="true"
@@ -74,28 +81,42 @@ class GoodsDetail extends Component {
               </select>
             </div>
           </div>
-
-          <div className="productname">제품명</div>
-          <div className="hashtag">해쉬태그자리입니다.</div>
-
-          <div className="allreview"> __개의 후기 보기</div>
-          <div className="goodtoknow">Good to Know</div>
-          <div className=" priceinfo">
-            <div className="price">
-              <div className="pricetext">판매가</div>
-              <div className="pricenum">{pricenum}원</div>
+          <div classname="header_wrapping">
+            {" "}
+            <div className="product_h1">
+              <div className="productname">{productname}</div>
+              <div className="product_img">
+                {/* <img
+                  src="/data/skin/front/howling/img/etc/bl_arrow.png"
+                  alt="공유"
+                />
+                <img src="" alt="하트" /> */}
+              </div>
             </div>
-            <div className="goodsweight">
-              <div className="goodsweightext">상품무게</div>
-              <div className="goodsweightnum">200g</div>
-            </div>
+            <div className="hashtag">{hashtag}</div>
+          </div>
 
-            <div className="ordercount">
-              <div className="ordercounttext">구매수량</div>
+          <div className="inner_right_box">
+            <div className="allreview"> __개의 후기 보기</div>
+            <div className="goodtoknow">Good to Know</div>
+            <div className=" priceinfo">
+              <div className="price">
+                <div className="pricetext">판매가</div>
+                <div className="pricenum">₩{pricenum}</div>
+              </div>
+              <div className="goodsweight">
+                <div className="goodsweightext">상품무게</div>
+                <div className="goodsweightnum">{goodsweightnum}g</div>
+              </div>
+
+              <div className="ordercount">
+                <div className="ordercounttext">구매수량</div>
+                <div className="button_box"></div>
+              </div>
             </div>
           </div>
-          <div className="price">
-            {/* <span className="count">
+
+          {/* <span className="count">
                 <button
                   type="button"
                   className="downcount"
@@ -107,7 +128,7 @@ class GoodsDetail extends Component {
                 </button>
 
                 <input
-                  type="rext"
+                  type="text"
                   className="countbtn"
                   title="수량"
                   data-key="0"
@@ -128,26 +149,25 @@ class GoodsDetail extends Component {
                   +
                 </button>
               </span> */}
-            {/* <p>
+          {/* <p>
                 <input type="hidden" value="0" name="optionPriceSum[]" />
                 <input type="hidden" value="0.00" name="option_price_0" />$
                 <strong class="option_price_display_0">12,000</strong>
               </p> */}
-          </div>
 
           <div className="endprice">
             <ul>
               <li className="price">
-                <span>총 제품 금액</span>
-                <strong className="goods_total_price">12000원</strong>
+                <span className="pricetext">총 제품 금액</span>
+                <span className="goods_total_price">₩{goods_total_price}</span>
               </li>
               {/* <li className="discounton">
                     <span>총 할인 금액</span>
                     <strong className="total_benefit_price"></strong>
                   </li> */}
               <li className="total">
-                <span>총 합계 금액</span>
-                <strong className="total_price">12000원</strong>
+                <span className="totaltext">총 합계 금액</span>
+                <span className="total_price">₩{total_price}</span>
               </li>
             </ul>
           </div>
@@ -161,14 +181,18 @@ class GoodsDetail extends Component {
           </div>
           <div className="naverpay">
             <div className="naverpaytext">
-              <img src="" alt="네이버페이텍스트" />
+              <p className="naverpay_text_en">NAVER</p>
+              <p className="naverpay_text_ko_a">네이버ID로 간편구매</p>
+              {/* <p className="naverpay_text_ko_b">네이버페이</p> */}
             </div>
             <div className="naverbox">
-              <p>sp</p>
+              <div className="naver_N_box">
+                <p className="naver_N">N</p>
+              </div>
+              <p className="pay_text">Pay 구매</p>
             </div>
             <div className="savebutton">
-              {" "}
-              37 37
+              <p className="save_text">찜</p>
               {/* <img src={naverpaycapture} alt="찜" /> */}
             </div>
           </div>
