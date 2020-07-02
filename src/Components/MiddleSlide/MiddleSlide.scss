@@ -6,6 +6,7 @@
       cursor: pointer;
       margin-left: 15px;
     }
+
     .slide-info {
       display: flex;
       flex-direction: column;
@@ -17,10 +18,12 @@
         color: #333333;
         cursor: pointer;
       }
+
       .hash-tag {
         color: #8f8f8f;
         cursor: pointer;
       }
+
       .price {
         margin-top: 10px;
         font-size: 16px;

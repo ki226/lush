@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./MiddleSlide.scss";
 
 class MiddleSlide extends Component {
-  state = {};
   render() {
     const { slideData } = this.props;
     return (

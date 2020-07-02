@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ProductDetail from "Components/ProductDetail";
 import BrandDetail from "Components/BrandDetail";
+import SearchPop from "Components/SearchPop";
 import mainLogo from "Images/logo.png";
 import topSearchIcon from "./Images/top_search_icon.png";
 import topCartIcon from "./Images/top_cart_icon.png";
@@ -19,10 +20,16 @@ class Header extends Component {
     });
   };
 
-  menuUp = () => {
-    this.setState({
-      activeTab: null,
-    });
+  menuUp = (e) => {
+    console.log(e.target);
+    this.setState(
+      {
+        activeTab: null,
+      },
+      () => {
+        console.log(this.state.activeTab);
+      }
+    );
   };
 
   render() {
@@ -75,8 +82,15 @@ class Header extends Component {
               </ul>
             </div>
             <ul className="main-icons">
-              <li className="main-icon-list header-search">
+              <li
+                className="main-icon-list header-search"
+                onClick={() => this.menuDown(3)}
+              >
                 <img className="main-icon" src={topSearchIcon} alt="search" />
+                <SearchPop
+                  menuHide={this.menuUp}
+                  menuOpen={this.state.activeTab}
+                />
               </li>
               <Link to="/shoppingCart">
                 <li className="main-icon-list header-cart">
