@@ -19,7 +19,7 @@ class TableRow extends Component {
               <input
                 className="check"
                 type="checkbox"
-                onChange={() => checkboxHandler(item.goods_no)}
+                onChange={() => checkboxHandler(item.product_number)}
                 checked={item.selected}
               />
               <label className="check-img" htmlFor="">
@@ -31,14 +31,14 @@ class TableRow extends Component {
             <div className="info">
               <div className="thumbnail">
                 <a href="">
-                  <img src={item.goods_thumbnail} />
+                  <img src={item.image} />
                 </a>
               </div>
               <div className="text">
                 <a className="goods-name" href="">
-                  {item.goods_name}
+                  {item.product_name}
                 </a>
-                <p className="goods-category">{item.goods_category}</p>
+                <p className="goods-category">{item.sub_ctgry_name}</p>
               </div>
             </div>
           </td>
@@ -46,7 +46,7 @@ class TableRow extends Component {
             <div className="button-box">
               <button
                 className="countDown"
-                onClick={() => counterHandler(item.goods_no, "-")}
+                onClick={() => counterHandler(item.product_number, "-")}
               >
                 감소
               </button>
@@ -59,7 +59,7 @@ class TableRow extends Component {
               />
               <button
                 className="countUp"
-                onClick={() => counterHandler(item.goods_no, "+")}
+                onClick={() => counterHandler(item.product_number, "+")}
               >
                 증가
               </button>
@@ -68,14 +68,14 @@ class TableRow extends Component {
           <td>
             <p className="price individual-price">
               {" "}
-              {`￦${item.goods_price.toLocaleString()}`}
+              {`￦${item.price.toLocaleString()}`}
             </p>
           </td>
           <td></td>
           <td>
             <p className="price total-price">
               {" "}
-              {`￦${(item.count * item.goods_price).toLocaleString()}`}
+              {`￦${(item.count * item.price).toLocaleString()}`}
             </p>
           </td>
           {index === 0 ? (
