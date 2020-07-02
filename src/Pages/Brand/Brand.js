@@ -88,6 +88,7 @@ class Brand extends Component {
         </div>
       </div>
     );
+
   }
 }
 

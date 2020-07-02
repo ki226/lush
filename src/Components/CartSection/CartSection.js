@@ -24,7 +24,7 @@ class CartSection extends Component {
       isMember &&
       items
         .filter((item) => item.selected === true)
-        .map((item) => item.count * item.goods_price)
+        .map((item) => item.count * item.price)
         .reduce((acc, curr) => acc + curr) >= MINIMUM_PURCHASE
         ? 0
         : SHIPPING_CHARGE;
