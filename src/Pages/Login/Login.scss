@@ -1,0 +1,346 @@
+.Login {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  .content {
+    display: block;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #333333;
+    height: 655px;
+    width: 1200px;
+    margin: 50px 0 50px 0;
+    padding: 0 0 50px 0;
+    //background-color: pink;
+  }
+
+  .member {
+    display: block;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #333333;
+    height: 555px;
+    width: 600px;
+    margin: 0 290px 0 290px;
+    padding: 50px 0 50px 0;
+  }
+
+  h2 {
+    display: block;
+    font-family: notokrB;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 39.2px;
+    text-decoration: none silid rgb(34, 34, 34);
+    text-align: center;
+    word-spacing: 0px;
+    background-color: #ffffff;
+    color: #222222;
+    height: 39px;
+    width: 600px;
+  }
+
+  ul {
+    display: block;
+    font-family: notokrR;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    line-height: 19.6px;
+    text-decoration: none solid rgb(51, 51, 51);
+    text-align: center;
+    word-spacing: 0px;
+    background-color: #ffffff;
+    background-position: 0% 0%;
+    color: #333333;
+    height: 25px;
+    width: 600px;
+    padding: 55px 0 0 0;
+  }
+
+  .ntab01 {
+    display: block;
+    font-family: notokrR;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    line-height: 19.6px;
+    text-decoration: none solid rgb(51, 51, 51);
+    word-spacing: 0px;
+    background-color: #ffffff;
+    background-position: 0% 0%;
+    color: #333333;
+    height: 516px;
+    width: 600px;
+  }
+
+  li {
+    display: inline-block;
+    font-family: notokrR;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    line-height: 25.2px;
+    text-decoration: none solid rgb(51, 51, 51);
+    text-align: center;
+    word-spacing: 0px;
+    background-color: #ffffff;
+    background-color: 0% 0%;
+    color: #333333;
+    height: 25px;
+    width: 32.125px;
+    padding: 0 40px 0 40px;
+  }
+
+  .choice {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 64px;
+  }
+
+  a {
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    text-decoration: none solid rgb(0, 0, 0);
+    //text-align: center;
+    //@debug: 0px;
+    background-color: #ffffff;
+    color: #000000;
+    background-position: 0% 0%;
+    border-bottom: 1px solid #000000;
+    //background-color: yellow;
+  }
+
+  a:not(:last-child) {
+    margin-right: 70px;
+  }
+
+  .login {
+    display: block;
+    overflow: hidden;
+    font-family: notokrR;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    line-height: 19.6px;
+    text-decoration: none solid rgb(51, 51, 51);
+    word-spacing: opx;
+    background-color: #ffffff;
+    color: #333333;
+    background-position: 0% 0%;
+    height: 274px;
+    width: 335px;
+    //margin: 30px 0 0 0 0;
+    //background-color: skyblue;
+    margin-left: 130px;
+  }
+
+  .input-info {
+    .inp_login {
+      height: 48px;
+      //width: 289px;
+      border: 1px solid #8f8f8f;
+      margin-top: 10px;
+      padding: 0 0 0 10px;
+      //display: flex;
+      //justify-content: center;
+      //align-items: center;
+
+      position: relative;
+
+      img {
+        //background-position: 0% 0%;
+        color: #333333;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        left: 10px;
+        top: 13px;
+        display: flex;
+      }
+
+      .loginId_text {
+        //font-family: notokrR;
+        font-size: 16px;
+
+        width: 240px;
+        position: absolute;
+        top: 15px;
+        left: 60px;
+        text-align: center;
+      }
+
+      .loginPwd_text {
+        text-align: center;
+        word-spacing: 0px;
+        width: 240px;
+        position: absolute;
+        top: 15px;
+        left: 60px;
+        //display: inline-block;
+        cursor: text;
+      }
+      input:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .formLogin {
+    font-family: notokrR;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    line-height: 19.6px;
+    text-decoration: none solid rgb(51, 51, 51);
+    word-spacing: 0px;
+    background-color: #ffffff;
+    background-position: 0% 0%;
+    color: #333333;
+    height: 381px;
+    width: 600px;
+    display: block;
+    transform: none;
+    transition: all 0s ease 0s;
+    //background-color: salmon;
+  }
+
+  .save {
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    line-height: 19.6px;
+    text-decoration: none silid rgb(51, 51, 51);
+    word-spacing: 0px;
+    //background-color: #ffffff;
+    //background-color: slateblue;
+    background-position: 0% 0%;
+    color: #333333;
+    height: 30px;
+    width: 35px;
+    margin: 20px 0 0 0;
+    //min-height: 20px;
+    //   position: relative;
+    //   top: 0px;
+    //   bottom: 0px;
+    //   right: 0px;
+    //   left: 0px;
+    display: flex;
+    justify-content: center;
+    transform: none;
+    transition: all 0s ease 0s;
+    //outline: rgb(255, 0, 0) dashed 1px;
+
+    .on {
+      //font-family: notokrR;
+      font-size: 14px;
+      //letter-spacing: -0.5px;
+      //line-height: 19.6px;
+      text-decoration: none solid rgb(143, 143, 143);
+      //vertical-align: top;
+      word-spacing: 0px;
+      //background-color: #ffffff;
+      //background-image: checkbox;
+      //background-color: springgreen;
+      background-position: 0% 0%;
+      background-repeat: no-repeat;
+      color: #8f8f8f;
+      height: 30px;
+      width: 100px;
+      //padding: 0 0 0 27px;
+      //display: inline-block;
+      cursor: pointer;
+      //transform: none;
+      //transition: all 0s ease 0s;
+      //outline: rgb(255, 0, 0) dashed 1px;
+    }
+  }
+
+  .loginbtn {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 55px;
+    //text-decoration: none solide rgb(255, 255, 255);
+    text-align: center;
+    //vertical-align: top;
+    word-spacing: 0px;
+    background-color: #000000;
+    background-position: 0% 0%;
+    color: #ffffff;
+    height: 55px;
+    width: 335px;
+    border: 1px solid #000000;
+    margin: 20px 0 0 0;
+    display: inline-block;
+    cursor: pointer;
+    transform: none;
+    transition: all 0.1s ease-out 0s;
+    outline: rgb(255, 255, 255) dashed 0px;
+    box-sizing: border-box;
+  }
+
+  .loginbtn .em {
+    font-family: notokrR;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 55px;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-align: center;
+    word-spacing: 0px;
+    background-color: #ffffff;
+    background-position: 0% 0%;
+    color: #ffffff;
+    //height: auto;
+    //width: auto;
+    //display: inline;
+    cursor: pointer;
+    //transform: none;
+    //transition: all 0s ease 0s;
+    //outline: rgb(255, 0, 0) dashed 1px;
+  }
+  .loginId_text {
+    border: none;
+  }
+  .loginPwd_text {
+    border: none;
+  }
+  .loginmenu {
+    text-align: center;
+    margin-top: 10px;
+    font-style: normal;
+  }
+
+  .skinbtn:not(:last-child) {
+    margin-right: 25px;
+  }
+  .skinbtn .em {
+    font-style: normal;
+  }
+  .skinbtn {
+    border: none;
+    background: none;
+  }
+
+  .naverloginbox {
+    display: block;
+    width: 335px;
+    margin: 50px auto 0;
+    border: 1px solid #c3c3c3;
+    height: 55px;
+    color: #8f8f8f;
+    //text-align: left;
+    //background-color: turquoise;
+    position: relative;
+
+    .naverlogoimg {
+      width: 48px;
+      height: 48px;
+      margin-top: 5px;
+      margin-left: 5px;
+      position: relative;
+    }
+
+    .naverlogintext {
+      position: absolute;
+      top: 17px;
+      left: 120px;
+    }
+  }
+}
