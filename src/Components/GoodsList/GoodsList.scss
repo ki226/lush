@@ -2,6 +2,8 @@ $color-font-black: #333333;
 $color-font-gray: #8f8f8f;
 
 .GoodsList {
+  padding-bottom: 100px;
+
   .heading {
     display: flex;
     justify-content: space-between;
@@ -52,5 +54,27 @@ $color-font-gray: #8f8f8f;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding-top: 20px;
+  }
+
+  .pagination {
+    padding-top: 40px;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        font-size: 14px;
+        color: $color-font-gray;
+        padding: 0 10px;
+      }
+
+      li.on {
+        color: $color-font-black;
+        text-decoration: underline;
+        cursor: default;
+      }
+    }
   }
 }

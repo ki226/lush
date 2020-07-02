@@ -34,6 +34,10 @@ $color-font-gray: #8f8f8f;
     img {
       width: 280px;
     }
+
+    &.soldOut {
+      opacity: 0.5;
+    }
   }
 
   .goods-info {

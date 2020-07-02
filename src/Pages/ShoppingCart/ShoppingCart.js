@@ -83,7 +83,7 @@ class ShoppingCart extends Component {
       .reduce((acc, curr) => acc + curr);
     const result = window.confirm(
       numberOfItems !== 0
-        ? `선택하신 ${numberOfItems}개상품만 주문합니다.`
+        ? `선택하신 ${Number(numberOfItems)}개상품만 주문합니다.`
         : "선택하신 상품이 없습니다."
     );
     // 추후 버튼 클릭 이후 동작 작성 필요

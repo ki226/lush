@@ -24,8 +24,14 @@ class GoodsList extends Component {
   };
 
   render() {
-    console.log(this.state);
-    const { productList, counts, categoryCode } = this.props;
+    const {
+      productList,
+      counts,
+      categoryCodeKey,
+      categoryCode,
+      currentPage,
+      pagesNumArr,
+    } = this.props;
     return (
       <div className="GoodsList">
         <div className="heading">
@@ -75,6 +81,23 @@ class GoodsList extends Component {
             />
           ))}
         </div>
+        <nav className="pagination">
+          <ul>
+            {pagesNumArr.map((page) => (
+              <Link
+                key={page}
+                onClick={() => window.scrollTo(0, 0)}
+                to={`/product?page=${
+                  page + 1
+                }&${categoryCodeKey}=${categoryCode}`}
+              >
+                <li className={page + 1 === +currentPage ? "on" : ""}>
+                  {page + 1}
+                </li>
+              </Link>
+            ))}
+          </ul>
+        </nav>
         {this.state.currentProductNumber && (
           <ShoppingCartModal
             product={

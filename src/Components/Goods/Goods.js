@@ -25,19 +25,20 @@ class Goods extends Component {
         <div className="choice">
           {/* 링크 수정 필요 */}
           <div className="button-wish button">
-            <img src={buttonWish} />
+            <img src={buttonWish} alt="button" />
           </div>
           <div className="button-cart button">
             <img
               src={buttonCart}
+              alt="button"
               onClick={() => toggleCartModal(product_number)}
             />
           </div>
         </div>
-        <div className="thumbnail">
+        <div className={`thumbnail ${stock <= 0 ? "soldOut" : ""}`}>
           {/* <Link to={/goods/${id}} */}
           <a>
-            <img className="thumbnail-img" src={image} />
+            <img className="thumbnail-img" src={image} alt="thumbnail" />
           </a>
         </div>
         <div className="goods-info">
@@ -45,10 +46,10 @@ class Goods extends Component {
             {stock <= 0 && (
               <img className="condition-img" alt="sold out" src={soldout} />
             )}
-            {is_new && (
+            {stock > 0 && is_new && (
               <img className="condition-img" alt="latest" src={latest} />
             )}
-            {is_vegan && (
+            {stock > 0 && is_vegan && (
               <img className="condition-img" alt="vegan" src={vegan} />
             )}
           </div>

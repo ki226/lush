@@ -15,7 +15,8 @@ class Product extends Component {
     this.state = {
       product: [],
       count: [],
-      page: new URLSearchParams(search).get("page"),
+      currentPage: new URLSearchParams(search).get("page"),
+      categoryCodeKey: "categoryCode",
       categoryCode: new URLSearchParams(search).get("categoryCode")
         ? new URLSearchParams(search).get("categoryCode")
         : new URLSearchParams(search).get("subCategoryCode"),
@@ -24,15 +25,21 @@ class Product extends Component {
   }
 
   componentDidMount() {
-    const { page, categoryCode } = this.state;
+    const { currentPage, categoryCode } = this.state;
     const categoryCodeKey =
       categoryCode.length === 6 ? "categoryCode" : "subCategoryCode";
     fetch(
-      // `${URL_PATH}goods/goods-list?&page=${page}&${categoryCodeKey}=${categoryCode}`
+      // `${URL_PATH}goods?page=${currentPage}&${categoryCodeKey}=${categoryCode}`
       DATA_PATH + "productData.json"
     )
       .then((res) => res.json())
-      .then(({ product, count }) => this.setState({ product, count }))
+      .then(({ product, count }) =>
+        this.setState({
+          product,
+          count,
+          pagesNumArr: [...Array(parseInt(count[0].total / COUNT) + 1).keys()],
+        })
+      )
       .catch((error) => console.log("Error occurred", error));
   }
 
@@ -45,21 +52,30 @@ class Product extends Component {
     } = this.props;
 
     if (prevSearch !== currSearch) {
-      const page = new URLSearchParams(currSearch).get("page");
+      const page = +new URLSearchParams(currSearch).get("page");
       const categoryCode = new URLSearchParams(currSearch).get("categoryCode")
         ? new URLSearchParams(currSearch).get("categoryCode")
         : new URLSearchParams(currSearch).get("subCategoryCode");
       const categoryCodeKey =
         categoryCode.length === 6 ? "categoryCode" : "subCategoryCode";
-      fetch(
-        `${URL_PATH}goods/goods-list?&page=${page}&${categoryCodeKey}=${categoryCode}`
-      )
+      fetch(`${URL_PATH}goods?page=${page}&${categoryCodeKey}=${categoryCode}`)
         .then((res) => res.json())
         .then(({ product, count }) =>
           this.setState({
             product,
             count,
-            categoryCode: categoryCode,
+            categoryCode,
+            categoryCodeKey,
+            currentPage: page,
+            pagesNumArr: [
+              ...Array(
+                parseInt(
+                  count.filter(
+                    (element) => element.category_code === categoryCode
+                  )[0].total / COUNT
+                ) + 1
+              ).keys(),
+            ],
           })
         )
         .catch((error) => console.log("Error occurred", error));
@@ -67,13 +83,23 @@ class Product extends Component {
   }
 
   render() {
-    const { product, count, categoryCode } = this.state;
+    const {
+      product,
+      count,
+      categoryCodeKey,
+      categoryCode,
+      currentPage,
+      pagesNumArr,
+    } = this.state;
     return product.length === 0 ? null : (
       <div className="Product">
         <GoodsList
           productList={product}
           counts={count}
+          categoryCodeKey={categoryCodeKey}
           categoryCode={categoryCode}
+          currentPage={currentPage}
+          pagesNumArr={pagesNumArr}
         />
       </div>
     );
