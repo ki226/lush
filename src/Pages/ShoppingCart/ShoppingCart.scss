@@ -35,4 +35,30 @@ $right-arrow: url("./Images/right-arrow.png");
       }
     }
   }
+
+  &.order {
+    .checkbox {
+      display: none;
+    }
+
+    .Table .table-header th:nth-child(1) {
+      width: 0px !important;
+    }
+
+    .Table .button-box {
+      border: none;
+
+      button {
+        display: none;
+      }
+    }
+
+    .buttons-box {
+      display: none;
+    }
+
+    .CustomerInfo {
+      display: block;
+    }
+  }
 }

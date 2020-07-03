@@ -22,7 +22,7 @@ class ConfirmModal extends Component {
             <button className="button-cancel" onClick={toggleConfirmModal}>
               계속 쇼핑하기
             </button>
-            <Link to="/shoppingcart">
+            <Link to="/shoppingcart?status=cart">
               <button className="button-add">확인하기</button>
             </Link>
           </div>
