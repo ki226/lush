@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import HeroBanner from "Components/HeroBanner";
 import "./Spa.scss";
 
 class Spa extends Component {
-  state = {};
   render() {
     return (
       <div className="Spa">
+        <HeroBanner banner="spaBanner" />
         <div className="spa-head">
           <div className="about-spa">
             <div className="about">ABOUT</div>
