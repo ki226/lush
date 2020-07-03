@@ -1,0 +1,49 @@
+.spa-head {
+  margin: 70px 0 65px 0;
+  display: flex;
+  justify-content: center;
+
+  .about-spa {
+    padding: 30px 25px 0 25px;
+    width: 280px;
+    height: 340px;
+    border: 5px solid black;
+
+    .about {
+      font-size: 17px;
+      font-weight: lighter;
+      color: #bfbfbf;
+    }
+    .voucher-guide {
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 50px;
+    }
+    .about-voucher {
+      padding-top: 15px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .more-info {
+      padding-top: 50px;
+      font-size: 14px;
+    }
+  }
+  .spa-store1,
+  .spa-store2 {
+    width: 430px;
+    height: 340px;
+    background-size: cover;
+  }
+  .spa-store1 {
+    background-image: url("./Images/spa_store1.jpg");
+  }
+  .spa-store2 {
+    background-image: url("./Images/spa_store2.jpg");
+  }
+  .about-spa,
+  .spa-store1,
+  .spa-store2 {
+    margin-left: 20px;
+  }
+}

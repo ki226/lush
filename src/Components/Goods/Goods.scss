@@ -15,6 +15,13 @@ $color-font-gray: #8f8f8f;
     flex-direction: column;
     font-size: 22px;
     display: none;
+
+    .button {
+      width: 28px;
+      height: 28px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
   }
 
   &:hover .choice {
@@ -26,6 +33,10 @@ $color-font-gray: #8f8f8f;
 
     img {
       width: 280px;
+    }
+
+    &.soldOut {
+      opacity: 0.5;
     }
   }
 

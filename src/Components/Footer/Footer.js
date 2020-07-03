@@ -37,7 +37,7 @@ class Footer extends Component {
                 <input type="text" placeholder="이메일 주소를 입력해주세요." />
               </div>
               <div className="foot-email-btn">
-                <button>구독하기</button>
+                <button className="foot-btn">구독하기</button>
               </div>
             </div>
             <div className="foot-company-info">

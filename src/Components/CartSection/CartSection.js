@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Table from "./Table";
 import PriceBox from "./PriceBox";
+import CustomerInfo from "./CustomerInfo";
 import "./CartSection.scss";
 
 const SHIPPING_CHARGE = 2500;
@@ -24,7 +25,7 @@ class CartSection extends Component {
       isMember &&
       items
         .filter((item) => item.selected === true)
-        .map((item) => item.count * item.goods_price)
+        .map((item) => item.count * item.price)
         .reduce((acc, curr) => acc + curr) >= MINIMUM_PURCHASE
         ? 0
         : SHIPPING_CHARGE;
@@ -68,6 +69,7 @@ class CartSection extends Component {
             </div>
           </div>
         ) : null}
+        <CustomerInfo deliveryCharge={deliveryCharge} items={items} />
       </div>
     );
   }

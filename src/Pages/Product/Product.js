@@ -2,31 +2,104 @@ import React, { Component } from "react";
 import GoodsList from "Components/GoodsList";
 import "./Product.scss";
 
+import { DATA_PATH, URL_PATH } from "config";
+
+const COUNT = 28;
+
 class Product extends Component {
-  state = {
-    product: null,
-    loading: true,
-  };
+  constructor(props) {
+    super(props);
+    const {
+      location: { search },
+    } = this.props;
+    this.state = {
+      product: [],
+      count: [],
+      currentPage: new URLSearchParams(search).get("page"),
+      categoryCodeKey: "categoryCode",
+      categoryCode: new URLSearchParams(search).get("categoryCode")
+        ? new URLSearchParams(search).get("categoryCode")
+        : new URLSearchParams(search).get("subCategoryCode"),
+      pagesNumArr: [],
+    };
+  }
 
   componentDidMount() {
-    fetch(process.env.PUBLIC_URL + "productData.json")
+    const { currentPage, categoryCode } = this.state;
+    const categoryCodeKey =
+      categoryCode.length === 6 ? "categoryCode" : "subCategoryCode";
+    fetch(
+      // `${URL_PATH}goods?page=${currentPage}&${categoryCodeKey}=${categoryCode}`
+      DATA_PATH + "productData.json"
+    )
       .then((res) => res.json())
-      .then((data) => this.setState({ product: data }))
-      .catch((error) => console.log("Error occurred", error))
-      .finally(() => {
-        this.setState({ loading: false });
-      });
+      .then(({ product, count }) =>
+        this.setState({
+          product,
+          count,
+          pagesNumArr: [...Array(parseInt(count[0].total / COUNT) + 1).keys()],
+        })
+      )
+      .catch((error) => console.log("Error occurred", error));
+  }
+
+  componentDidUpdate(prevProps) {
+    const {
+      location: { search: prevSearch },
+    } = prevProps;
+    const {
+      location: { search: currSearch },
+    } = this.props;
+
+    if (prevSearch !== currSearch) {
+      const page = +new URLSearchParams(currSearch).get("page");
+      const categoryCode = new URLSearchParams(currSearch).get("categoryCode")
+        ? new URLSearchParams(currSearch).get("categoryCode")
+        : new URLSearchParams(currSearch).get("subCategoryCode");
+      const categoryCodeKey =
+        categoryCode.length === 6 ? "categoryCode" : "subCategoryCode";
+      fetch(`${URL_PATH}goods?page=${page}&${categoryCodeKey}=${categoryCode}`)
+        .then((res) => res.json())
+        .then(({ product, count }) =>
+          this.setState({
+            product,
+            count,
+            categoryCode,
+            categoryCodeKey,
+            currentPage: page,
+            pagesNumArr: [
+              ...Array(
+                parseInt(
+                  count.filter(
+                    (element) => element.category_code === categoryCode
+                  )[0].total / COUNT
+                ) + 1
+              ).keys(),
+            ],
+          })
+        )
+        .catch((error) => console.log("Error occurred", error));
+    }
   }
 
   render() {
-    const { loading, product } = this.state;
-    return loading ? null : (
+    const {
+      product,
+      count,
+      categoryCodeKey,
+      categoryCode,
+      currentPage,
+      pagesNumArr,
+    } = this.state;
+    return product.length === 0 ? null : (
       <div className="Product">
         <GoodsList
-          category_name={product.category_name}
-          category_id={product.category_id}
-          sub_category={product.sub_category}
-          results={product.results}
+          productList={product}
+          counts={count}
+          categoryCodeKey={categoryCodeKey}
+          categoryCode={categoryCode}
+          currentPage={currentPage}
+          pagesNumArr={pagesNumArr}
         />
       </div>
     );

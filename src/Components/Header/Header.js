@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ProductDetail from "Components/ProductDetail";
 import BrandDetail from "Components/BrandDetail";
+import SearchPop from "Components/SearchPop";
 import mainLogo from "Images/logo.png";
 import topSearchIcon from "./Images/top_search_icon.png";
 import topCartIcon from "./Images/top_cart_icon.png";
@@ -19,7 +20,8 @@ class Header extends Component {
     });
   };
 
-  menuUp = () => {
+  menuUp = (e) => {
+    e.stopPropagation();
     this.setState({
       activeTab: null,
     });
@@ -45,7 +47,6 @@ class Header extends Component {
                   <Link className="main-menu" to="/product">
                     제품
                   </Link>
-
                   <ProductDetail menuDown={this.state.activeTab} />
                 </li>
                 <li
@@ -76,22 +77,36 @@ class Header extends Component {
               </ul>
             </div>
             <ul className="main-icons">
-              <li className="main-icon-list header-search">
+              <li
+                className="main-icon-list header-search"
+                onClick={() => this.menuDown(3)}
+              >
                 <img className="main-icon" src={topSearchIcon} alt="search" />
+                <SearchPop
+                  menuHide={this.menuUp}
+                  activeTab={this.state.activeTab}
+                />
               </li>
-              <li className="main-icon-list header-cart">
-                <img className="main-icon" src={topCartIcon} alt="cart" />
-                <div className="cart-count">
-                  <span className="cart-count-number">0</span>
-                </div>
-              </li>
+              <Link to="/shoppingCart">
+                <li className="main-icon-list header-cart">
+                  <img className="main-icon" src={topCartIcon} alt="cart" />
+                  <div className="cart-count">
+                    <span className="cart-count-number">0</span>
+                  </div>
+                </li>
+              </Link>
               <li
                 className="main-icon-list header-pop"
                 onMouseOver={() => this.menuDown(2)}
                 onMouseLeave={this.menuUp}
               >
-                <Link to="/mypage"></Link>
-                <img className="main-icon" src={topMyPageIcon} alt="mypage" />
+                <Link to="/mypage">
+                  <img
+                    className="main-icon mypage-icon"
+                    src={topMyPageIcon}
+                    alt="mypage"
+                  />
+                </Link>
                 <div
                   className={`pop-form ${
                     this.state.activeTab === 2 ? "pop-form-show" : "pop-hide"
