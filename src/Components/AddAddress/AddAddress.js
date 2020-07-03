@@ -3,7 +3,7 @@ import "./AddAddress.scss";
 
 class AddAddress extends Component {
   render() {
-    const { menuShow, menuHide } = this.props;
+    const { menuShow, menuHide, inputHandle, dataPost } = this.props;
     return (
       <div
         className={`AddAddress ${
@@ -20,7 +20,11 @@ class AddAddress extends Component {
                   <p>*배송지 이름</p>
                 </div>
                 <div className="name-input">
-                  <input type="text"></input>
+                  <input
+                    type="text"
+                    name="addressName"
+                    onChange={inputHandle}
+                  ></input>
                 </div>
               </div>
               <div className="recieve-user-name-input">
@@ -28,7 +32,11 @@ class AddAddress extends Component {
                   <p>*받으실 분</p>
                 </div>
                 <div className="user-input">
-                  <input type="text"></input>
+                  <input
+                    type="text"
+                    name="userName"
+                    onChange={inputHandle}
+                  ></input>
                 </div>
               </div>
               <div className="address-input">
@@ -37,7 +45,11 @@ class AddAddress extends Component {
                 </div>
                 <div className="address-input-form">
                   <div className="address-input1">
-                    <input type="text"></input>
+                    <input
+                      type="text"
+                      name="address"
+                      onChange={inputHandle}
+                    ></input>
                     <button>우편번호 검색</button>
                   </div>
                   <div className="address-input2">
@@ -51,7 +63,11 @@ class AddAddress extends Component {
                   <p>전화번호</p>
                 </div>
                 <div className="number-input">
-                  <input type="text"></input>
+                  <input
+                    type="text"
+                    name="number"
+                    onChange={inputHandle}
+                  ></input>
                 </div>
               </div>
               <div className="user-mobile-input">
@@ -59,7 +75,11 @@ class AddAddress extends Component {
                   <p>*휴대폰번호</p>
                 </div>
                 <div className="mobile-input">
-                  <input type="text"></input>
+                  <input
+                    type="text"
+                    name="mobile"
+                    onChange={inputHandle}
+                  ></input>
                 </div>
               </div>
             </div>
@@ -76,7 +96,7 @@ class AddAddress extends Component {
                 <button onClick={menuHide}>취소</button>
               </div>
               <div className="save-btn">
-                <button onClick={menuHide}>저장</button>
+                <button onClick={dataPost}>저장</button>
               </div>
             </div>
           </div>

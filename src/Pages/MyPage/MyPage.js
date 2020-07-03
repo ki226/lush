@@ -5,6 +5,24 @@ import "./MyPage.scss";
 class MyPage extends Component {
   state = {
     menuShow: null,
+    addressInfo: [],
+  };
+
+  addressDataPost = () => {
+    fetch("http://10.58.7.168:8000/mypage/shipping", {
+      method: "POST",
+      body: JSON.stringify({
+        name: this.state.addressName,
+        recipient: this.state.userName,
+        address: this.state.address,
+        phone_number: this.state.mobile,
+      }),
+    }).then(() => {
+      this.setState({ menuShow: null });
+      fetch("http://10.58.7.168:8000/mypage/shipping")
+        .then((res) => res.json())
+        .then((res) => this.setState({ addressInfo: res.shipping }));
+    });
   };
 
   showSelectedMenu = (id) => {
@@ -19,11 +37,23 @@ class MyPage extends Component {
     });
   };
 
+  inputHandle = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+
   render() {
-    const { menuShow } = this.state;
+    const { menuShow, addressInfo } = this.state;
+    console.log(addressInfo);
     return (
       <>
-        <AddAddress menuShow={menuShow} menuHide={this.HideMenu} />
+        <AddAddress
+          inputHandle={this.inputHandle}
+          menuShow={menuShow}
+          menuHide={this.HideMenu}
+          dataPost={this.addressDataPost}
+        />
 
         <div className="MyPage">
           <div className="mypage-container">
@@ -135,13 +165,18 @@ class MyPage extends Component {
                 </div>
               </div>
               <div className="address-list">
-                <ul className="add-address">
-                  <li className="added-address-name"></li>
-                  <li className="added-recieve-user-name"></li>
-                  <li className="added-address"></li>
-                  <li className="added-phone-number"></li>
-                  <li className="added-address-delete"></li>
-                </ul>
+                {addressInfo.map((address, idx) => (
+                  <ul className="add-address">
+                    <li className="added-address-name">{address.name}</li>
+                    <li className="added-recieve-user-name">
+                      {address.recipient}
+                    </li>
+                    <li className="added-address">{address.address}</li>
+                    <li className="added-phone-number">
+                      {address.phone_number}
+                    </li>
+                  </ul>
+                ))}
               </div>
             </div>
           </div>

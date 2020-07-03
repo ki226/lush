@@ -161,6 +161,29 @@
       }
     }
     .address-list {
+      .add-address {
+        display: flex;
+        justify-content: space-around;
+        text-align: start;
+        align-items: center;
+        margin-left: -10px;
+
+        .added-address-name {
+          width: 75px;
+        }
+
+        .added-recieve-user-name {
+          width: 150px;
+        }
+
+        .added-address {
+          width: 550px;
+        }
+
+        .added-phone-number {
+          width: 150px;
+        }
+      }
     }
   }
 }
