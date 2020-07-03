@@ -1,9 +1,21 @@
 import React, { Component } from "react";
 import CartSection from "Components/CartSection";
+
 import "./ShoppingCart.scss";
 
 class ShoppingCart extends Component {
-  state = { isMember: false, items: [] };
+  constructor(props) {
+    super(props);
+    const {
+      location: { search },
+    } = this.props;
+    this.state = {
+      isMember: false,
+      items: [],
+      status: new URLSearchParams(search).get("status"),
+      orderItems: [],
+    };
+  }
 
   componentDidMount() {
     this.loadData();
@@ -86,19 +98,28 @@ class ShoppingCart extends Component {
         ? `선택하신 ${Number(numberOfItems)}개상품만 주문합니다.`
         : "선택하신 상품이 없습니다."
     );
-    // 추후 버튼 클릭 이후 동작 작성 필요
+
+    if (result) {
+      this.props.history.push("/shoppingcart?status=order");
+      const orderItems = items.map((item) => item.selected);
+      this.setState({ status: "order", orderItems });
+      window.scrollTo(0, 0);
+    }
   };
 
   render() {
-    const { isMember, items } = this.state;
+    const { isMember, items, status, orderItems } = this.state;
+    console.log(this.state);
     return (
-      <div className="ShoppingCart">
+      <div className={`ShoppingCart ${status}`}>
         <div className="header">
           <h2 className="heading">SHOPPING CART</h2>
           <div className="shopping-status">
-            <span className="on">Cart</span>
-            <span>Order</span>
-            <span>Order confirmed</span>
+            <span className={status === "cart" ? "on" : ""}>Cart</span>
+            <span className={status === "order" ? "on" : ""}>Order</span>
+            <span className={status === "orderConfirmed" ? "on" : ""}>
+              Order confirmed
+            </span>
           </div>
         </div>
         <CartSection
@@ -109,6 +130,7 @@ class ShoppingCart extends Component {
           checkChildrenHandler={this.checkChildrenHandler}
           deleteItems={this.deleteItems}
           makeOrder={this.makeOrder}
+          orderItems={orderItems}
         />
       </div>
     );
