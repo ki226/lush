@@ -18,11 +18,9 @@ import StoreInfo from "Pages/StoreInfo";
 import KakaoTalk from "Components/KakaoTalk";
 import Header from "Components/Header";
 import Footer from "Components/Footer";
-import GoodsInfo from "Components/Detail/GoodsInfo";
-import GoodsReview from "Components/Detail/GoodsReview";
-import GoodsDetail from "Components/Detail/GoodsDetail";
 import Goods from "Components/Goods";
-import Detail from "Components/Detail/Detail";
+import Detail from "Pages/Detail/Detail";
+
 class Routes extends React.Component {
   render() {
     return (
@@ -39,10 +37,8 @@ class Routes extends React.Component {
           <Route exact path="/shoppingcart" component={ShoppingCart} />
           <Route exact path="/spa" component={Spa} />
           <Route exact path="/KaKaoTalk" componenet={KakaoTalk} />
-          <Route exact path="/GoodsInfo" component={GoodsInfo} />
+
           <Route exact path="/storeinfo" component={StoreInfo} />
-          <Route exact path="/GoodsReview" component={GoodsReview} />
-          <Route exact path="/GoodsDetail" component={GoodsDetail} />
           <Route exact path="/Goods" component={Goods} />
           <Route exact path="/Detail" component={Detail} />
           <Redirect from="*" to="/" />

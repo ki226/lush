@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import icon_id from "./Images/icon_id.png";
 import icon_password from "./Images/icon_password.png";
 import logo_naver_n from "./Images/logo-naver_n.gif";
+import { URL_PATH } from "config.js";
 import "./Login.scss";
 
 class Login extends Component {
@@ -38,7 +39,7 @@ class Login extends Component {
 
   handleButton = () => {
     // post
-    fetch("http://10.58.0.189:8000/user/signin/", {
+    fetch(`${URL_PATH}user/signin`, {
       // fetch 인자의 첫 번째 인자는 api 주소고, 두 번째 인자는 객체 형태이고
       method: "POST", // 메소드 뒤에 포스트를 스트링으로 적어줘야 하는데, get은 디폴트 값이 원래 있어서 안 써줘도 됨.
       body: JSON.stringify({
@@ -46,7 +47,15 @@ class Login extends Component {
         user_id: this.state.user_id,
         password: this.state.password,
       }),
-    }).then((res) => res.json());
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        localStorage.setItem("token", data.Authorization);
+        if (data.message === "LOGIN SUCCESS") {
+          this.props.history.push("/");
+        }
+      });
   };
 
   //state = {};
@@ -78,11 +87,7 @@ class Login extends Component {
                             onChange={this.handleID}
                             type="text"
                             className="loginId_text"
-                            //name="loginId_text"
-                            //value="아이디"
                             placeholder="아이디"
-                            // required="true"
-                            // aria-required="true"
                           />
                         </div>
                         <div>
@@ -95,11 +100,7 @@ class Login extends Component {
                               onKeyPress={this.handlePasswordEnter}
                               type="password"
                               className="loginPwd_text"
-                              //name="loginPwd"
-                              //value=""
                               placeholder="비밀번호"
-                              //required="true"
-                              //aria-required="true"
                             />
                           </div>
                         </div>
@@ -108,11 +109,12 @@ class Login extends Component {
                         <input
                           type="checkbox"
                           className="checkbox"
-                          //name="saveId"
-                          value=""
-                          checked=""
+                          value="y"
+                          aria-invalid="false"
                         />
-                        <div className="on">아이디 저장</div>
+                        <label for="maillingFl" className="on">
+                          아이디 저장
+                        </label>
                       </div>
                       <button
                         onClick={this.handleButton}
@@ -134,16 +136,12 @@ class Login extends Component {
                       </div>
                     </div>
                     <div className="naverloginbox">
-                      {/* <div className="naverlogin"> */}
-                      {/* href="#"
-                        data-naver-url="https://socialmember.godo.co.kr/NaverLogin/naver_api.php?mode=login&amp;response_type=code&amp;client_id=0Q8wjCNa7cJS0AvkCJEQ&amp;redirect_uri=https%3A%2F%2Flush.co.kr%2F&amp;state=9a9b87f8cf176066bf8e9c73ee6222b3" */}
                       <img
                         src={logo_naver_n}
                         className="naverlogoimg"
                         alt="네이버"
                       />
                       <p className="naverlogintext">네이버 아이디로 로그인</p>
-                      {/* </div> */}
                     </div>
                   </div>
                 </div>

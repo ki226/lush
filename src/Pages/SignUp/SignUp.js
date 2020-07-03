@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./SignUp.scss";
-
-const SERVER_IP = "http://10.58.2.153:8000";
+import { URL_PATH } from "config.js";
 
 class SignUp extends Component {
   constructor() {
@@ -68,25 +67,6 @@ class SignUp extends Component {
     return password === confirm_password;
   }
 
-  //패스워드가 일치하는지 확인해서 유저에게 피드백을 준다.
-  // renderFeedbackMessage() {
-  //   const { password, confirm_password } = this.state;
-
-  //   if (comfirm_password) {
-  //     if (!this.doesPasswordMatch()) {
-  //       return (
-  //         <div className="invalid-feedback">비밀번호가 일치하지 않습니다.</div>
-  //       );
-  //     }
-  //   }
-  // }
-
-  // //비밀번호&비밀번호 확인이 일치하는지 확인해서 알려준다.
-  // doesPasswordMatch() {
-  //   const { password, comfirm_password } = this.state;
-  //   return password === confirm_password;
-  // }
-
   handleName = (event) => {
     this.setState({
       name: event.target.value,
@@ -129,7 +109,7 @@ class SignUp extends Component {
 
   handleButton = () => {
     // post
-    fetch(`${SERVER_IP}/user/signup`, {
+    fetch(`${URL_PATH}user/signup`, {
       // fetch 인자의 첫 번째 인자는 api 주소고, 두 번째 인자는 객체 형태이고
       method: "POST", // 메소드 뒤에 포스트를 스트링으로 적어줘야 하는데, get은 디폴트 값이 원래 있어서 안 써줘도 됨.
       body: JSON.stringify({
@@ -144,7 +124,11 @@ class SignUp extends Component {
       }),
     })
       .then((res) => res.json())
-      .then((res) => console.log("res >>> ", res));
+      .then((res) => {
+        if (res.message === "SUCCESS") {
+          this.props.history.push("/login");
+        }
+      });
   };
 
   render() {
@@ -167,46 +151,60 @@ class SignUp extends Component {
             <div className="memberinfohead">
               <span className="infotext">기본정보</span>
               <span className="infostar">
-                🟥표시는 반드시 입력하셔야 하는 항목입니다.
+                ■표시는 반드시 입력하셔야 하는 항목입니다.
               </span>
               <div className="form">
-                <div className="box">
-                  <span className="red">🟥</span>
+                <div className="box_id">
+                  <span className="red">■</span>
                   <span className="text">아이디</span>
                   <input
                     onChange={this.handleID}
-                    className="inputbox"
+                    className={"inputbox"}
                     type="text"
                   />
                 </div>
+                <div className="id_message">
+                  <div
+                    className={
+                      this.state.user_id.length > 4 ? "id-color" : "id-none"
+                    }
+                  ></div>
+                </div>
                 <div className="box">
-                  <span className="red">🟥</span>
+                  <span className="red">■</span>
                   <span className="text">비밀번호</span>
                   <input
                     onChange={this.handlePassword}
-                    onKeyUp={this.handleComparePassword}
-                    className="inputbox"
+                    className={
+                      this.state.password.length > 11
+                        ? "inputbox color-change"
+                        : "inputbox"
+                    }
                     type="password"
                   />
-                  <div className="pwderrormessage">
-                    {/* {this.state.password.length < 10
-                      ?  this.state.password.length > 4
-                        "최소 10 이상 입력해주세요."
-                      : ""} */}
-                  </div>
+                  <div className="pwderrormessage"></div>
                 </div>
-                <div className="box">
-                  <span className="red">🟥</span>
+                <div className="box_confirm_password">
+                  <span className="red">■</span>
                   <span className="text">비밀번호 확인</span>
                   <input
                     onChange={this.handleConfirmPassword}
-                    className="inputbox"
                     type="password"
+                    className="inputbox"
                   />
-                  <span>{this.state.compare_password}</span>
+                </div>
+                <div className="password_message">
+                  <span
+                    className={
+                      this.state.confirm_password.length > 10 &&
+                      this.state.password === this.state.confirm_password
+                        ? "id-color"
+                        : "id-color-reds"
+                    }
+                  ></span>
                 </div>
                 <div className="box">
-                  <span className="red">🟥</span>
+                  <span className="red">■</span>
                   <span className="text">이름</span>
                   <input
                     onChange={this.handleName}
@@ -223,14 +221,14 @@ class SignUp extends Component {
                   />
                 </div>
                 <div className="box">
-                  <span className="red">🟥</span>
+                  <span className="red">■</span>
                   <span className="text">이메일</span>
                   <input
                     onChange={this.handleEmail}
                     className="inputboxa"
                     type="text"
                   />
-                  {/* <input className="inputboxb" type="text" /> */}
+
                   <select
                     className="email_select"
                     aria-required="true"
@@ -253,7 +251,7 @@ class SignUp extends Component {
                   </div>
                 </div>
                 <div className="box">
-                  <span className="red">🟥</span>
+                  <span className="red">■</span>
                   <span className="text">휴대폰번호</span>
                   <input
                     onChange={this.handlephone_number}

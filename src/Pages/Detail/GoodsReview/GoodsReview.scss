@@ -4,39 +4,28 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  //background-color: green;
-  //border: 1px solid black;
+
   position: relative;
   .plusreview {
     width: 1180px;
     height: 40px;
-    //background-color: darkorange;
 
     .title {
       font-size: 20px;
       font-weight: bold;
       position: absolute;
       margin-left: 10px;
-      //text-align: left;
     }
   }
   .reviewcontainer {
     display: flex;
     margin-top: 50px;
-    //width: 100%;
-    //height: 100%;
-
-    //position: absolute;
     .plusreviewphoto {
       width: 745px;
       height: 190px;
-      //background-color: deeppink;
       border: 2px solid rgb(199, 198, 198);
       margin-right: 10px;
-
-      //position: relative;
       .plusreviewphototext {
-        //background-color: firebrick;
         width: 740px;
         height: 45px;
         margin-top: 30px;
@@ -45,26 +34,25 @@
           padding-left: 30px;
         }
       }
+      .plusreview_img {
+        width: 700px;
+        height: 100px;
+        // background-color: blue;
+        margin-left: 20px;
+      }
     }
     .starscores {
       width: 428px;
       height: 190px;
-      //background-color: darkseagreen;
-      //postion: relative;
       border: 2px solid rgb(199, 198, 198);
       margin-right: 10px;
       display: flex;
       .scores {
-        //display: flex;
-        //align-items: center;
-        //justify-content: center;
         width: 213px;
         height: 188px;
-        //background-color: green;
         .aligntext {
           width: 213px;
           height: 120px;
-          //background-color: hotpink;
           margin-top: 35px;
 
           .text {
@@ -98,16 +86,12 @@
               display: flex;
               padding: 5px;
               font-size: 20px;
-
               .registerreviewtext {
-                //text-align: left;
-                //font-size: 10px;
-                //padding: 10px;
-                //color: rgb(216, 213, 213);
                 color: gray;
+                margin-right: 88px;
               }
               .registerrevviewnum {
-                margin-left: 50px;
+                justify-content: flex-end;
               }
             }
             .photoreview {
@@ -115,12 +99,11 @@
               padding: 5px;
               font-size: 20px;
               .photoreviewtext {
-                //text-align: left;
-                //font-size: 10px;
-                // padding: 10px;
-                // color: rgb(216, 213, 213);
+                margin-right: 88px;
+                color: gray;
               }
               .photoreviewnum {
+                justify-content: flex-end;
               }
             }
             .productcheck {
@@ -128,12 +111,8 @@
               padding: 5px;
               font-size: 20px;
               .productchecktext {
-                // text-align: left;
-                // font-size: 10px;
-                // padding: 10px;
-                // color: rgb(216, 213, 213);
-              }
-              .productchecknum {
+                margin-right: 70px;
+                color: gray;
               }
             }
           }
@@ -141,22 +120,4 @@
       }
     }
   }
-
-  // .plusreviewphoto {
-  //   width: 700px;
-  //   height: 170px;
-  //   //background-color: darkgoldenrod;
-  //   //border: 1px solid black;
-  // }
-  // .starscores {
-  //   width: 460px;
-  //   height: 200px;
-  //   border: 10x solid black;
-  //   //sbackground-color: pink;
-  // }
-  // .thenumberofreview {
-  //   width: 600px;
-  //   height: 200px;
-  //   border: 1px solid black;
-  // }
 }

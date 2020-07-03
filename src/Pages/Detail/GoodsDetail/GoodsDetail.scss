@@ -1,106 +1,88 @@
 .GoodsDetailcontents {
   width: 1200px;
-  //height: 600px;
   display: flex;
-  //flex-direction: column;
   justify-content: center;
-  // align-items: center;
   margin: 0 auto;
+  // background-color: darkorange;
   .mainleft {
-    //width: 505px;
-    //height: 600px;
     margin-top: 60px;
-    //background-color: darkgoldenrod;
-    //display: flex;
-    //margin: 0 auto;
+    margin-right: 40px;
+    padding: 20px 20px 10px 20px;
+
+    // background: darkgreen;
     .picturebox {
-      //background-color: yellow;
       width: 380px;
       height: 380px;
-      margin: 20px 40px 20px 40px;
-      // .picture {
-      //   width: 380px;
-      //   height: 380px;
-      //   margin: 10px;
-      // }
+      // margin: 20px 40px 20px 40px;
+      // background-color: darkmagenta;
+
+      .picture {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+      }
     }
     .picturefootera {
-      //background-color: tomato;
       width: 379px;
       height: 150px;
+      margin-top: 30px;
+      // background-color: darkgoldenrod;
       .picturefooterimg {
-        //margin-top: 100px;
-        //margin-left: 10px;
-        width: 379px;
+        // width: 379px;
         height: 50px;
-        //background-color: indianred;
+        // background-color: darkblue;
       }
     }
   }
 
   .mainright {
+    // background-color: darkred;
     .location {
       display: inline-flex;
       width: 577px;
-      //height: 50px;
-      margin-top: 60px;
+      height: 25px;
+      margin-top: 20px;
       margin-bottom: 40px;
-      //height: 52px;
-      //background-color: red;
-      //position: relative;
-      //flex-direction: row-reverse;
+      // background-color: darksalmon;
 
       .locationhome {
         width: 50px;
-        //height: 50px;
-        //background-color: green;
 
         .home {
           font-size: 20px;
-          //width: 400px;
         }
       }
       .locationwrap {
         width: 100%;
-        //background-color: hotpink;
         .productselect {
-          //width: 100px;
-          //background-color: indigo;
           padding: 3px 30px 3px 30px;
         }
         .productdetailselect {
-          //width: 100px;
           margin-left: 10px;
           margin-right: 10px;
-          //background-color: lightcoral;
           padding: 3px 30px 3px 30px;
         }
         .productdetailselecta {
-          //osition: absolute;
-          //background-color: lightskyblue;
-          //margin-left: 250px;
           padding: 3px 30px 3px 30px;
         }
       }
     }
     .header_wrapping {
-      width: 100%;
+      width: 550px;
       height: 100px;
+      // background-color: darkseagreen;
+      // border: 1px solid red;
+
       .product_h1 {
         display: flex;
         width: 100%;
         height: 70%;
 
-        .productname {
-          font-size: 20px;
+        .product_name {
+          font-size: 30px;
           font-style: solid;
-          //padding-left: 0;
-          //margin-left: 0px;
-          //display: inline;
-          //width: 450px;
-          //height: 20px;
           margin-right: auto;
-          //background-color: brown;
         }
         .product_img {
           margin-left: auto;
@@ -108,16 +90,15 @@
         }
       }
       .hashtag {
-        //display: flex;
-        //background-color: salmon;
-        //width: 450px;
         height: 30px;
       }
     }
 
     .inner_right_box {
+      width: 577px;
+      height: 250px;
+      // background-color: darkslategray;
       .allreview {
-        //background-color: seagreen;
         width: 577px;
         height: 30px;
         font-size: 15px;
@@ -125,37 +106,29 @@
       }
 
       .goodtoknow {
-        //background-color: sienna;
         width: 577px;
         height: 30px;
         font-size: 15px;
         margin-bottom: 20px;
       }
       .priceinfo {
-        //width: 600px;
         height: 150px;
-        //background-color: darkorange;
-
-        //display: flex;
         .price {
           display: flex;
-          //margin-left: 200px;
           width: 200px;
           height: 50px;
-          //background-color: yellowgreen;
           .pricetext {
             font-size: 17px;
           }
           .pricenum {
-            margin-left: 60px;
-            font-size: 25px;
+            margin-left: 45px;
+            font-size: 15px;
           }
         }
         .goodsweight {
           display: flex;
           width: 200px;
           height: 50px;
-          //background-color: red;
           .goodsweightext {
             font-size: 17px;
           }
@@ -165,12 +138,37 @@
           }
         }
         .ordercount {
-          //display: flex;
-          width: 200px;
+          display: flex;
+          width: 500px;
           height: 50px;
-          //background-color: green;
+          // background-color: deeppink;
           .ordercounttext {
             font-size: 17px;
+            // margin-right: 30px;
+            width: 100px;
+            height: 30px;
+            // background-color: darkturquoise;
+          }
+          .buttonbody {
+            // margin-left: 100px;
+            width: 170px;
+            height: 30px;
+            // background-color: dodgerblue;
+            display: flex;
+            .count {
+              width: 30px;
+              height: 30px;
+            }
+            .countbox {
+              height: 30px;
+              width: 100px;
+              // background-color: firebrick;
+              border: 1px solid black;
+              padding: 5px;
+              .countbox_text {
+                text-align: center;
+              }
+            }
           }
         }
       }
@@ -181,7 +179,6 @@
     width: 580px;
     height: 100px;
     margin-top: 30px;
-    //background-color: darkgray;
     border-top: 1px solid #e7e7e7;
 
     .price {
@@ -225,7 +222,6 @@
       width: 285px;
       height: 54px;
       margin-right: 5px;
-      //background-color: slateblue;
       border: 1px solid black;
       .ordertexta {
         text-align: center;
@@ -255,8 +251,6 @@
     .naverpaytext {
       width: 120px;
       margin-right: 3px;
-      //background-color: orange;
-      //border: 1px solid black;
       padding-left: 10px;
       .naverpay_text_en {
         font-size: 7px;
@@ -267,10 +261,6 @@
         font-size: 2px;
         padding: 0;
       }
-      // .naverpay_text_ko_b {
-      //   font-size: 2px;
-      //   padding: 0;
-      // }
     }
     .naverbox {
       width: 150px;
@@ -280,28 +270,19 @@
       padding: 5px 10px 2px 30px;
       display: flex;
 
-      .naver_N_box {
-        width: 30px;
-        height: 25px;
-        background-color: white;
-        display: flex;
-        //margin-top: 5px;
-        //padding-bottom: 5px;
-        //margin-left: 13px;
-        .naver_N {
-          font-size: 25px;
-          font-weight: bolder;
-          color: #00c73c;
-
-          //margin-bottom: 5px;
-          //margin-top: 15px;
-        }
-        .pay_text {
-          font-size: 15px;
-          //margin-bottom: 5px;
-          //margin-left: 35px;
-          color: white;
-        }
+      // .naver_N_box {
+      //   width: 30px;
+      //   height: 25px;
+      //   background-color: white;
+      //   display: flex;
+      // .naver_N {
+      //   font-size: 25px;
+      //   font-weight: bolder;
+      //   color: white;
+      // }
+      .pay_text {
+        font-size: 15px;
+        color: white;
       }
     }
     .savebutton {
@@ -310,7 +291,6 @@
       width: 37px;
       height: 37px;
       padding: 3px 3px 3px 3px;
-      //font-size: 15px;
       .save_text {
         font-size: 14px;
         color: #00c73c;
