@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./GoodsDetail.scss";
-import "../../../../public/data";
-// import naverpaycapture from "./Images/naverpaycapture.png";
 
 class GoodsDetail extends Component {
   render() {
@@ -11,14 +9,14 @@ class GoodsDetail extends Component {
       hash_tag,
       price,
       weight,
-      goods_total_price,
-      total_price,
+      // goods_total_price,
+      // total_price,
     } = this.props; //부모컴포넌트에서 프롭스로 받겠다.
 
     // 객체 비구조화 할당
     // this.props  price
     // const {  price } = this.props;
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <div className="GoodsDetailcontents">
         <div className="mainleft">
@@ -102,11 +100,11 @@ class GoodsDetail extends Component {
             <div className=" priceinfo">
               <div className="price">
                 <div className="pricetext">판매가</div>
-                <div className="price">₩ {price}</div>
+                <div className="pricenum">₩ {price}</div>
               </div>
               <div className="goodsweight">
                 <div className="goodsweightext">상품무게</div>
-                <div className="weight">{weight}g</div>
+                <div className="goodsweightnum">{weight}g</div>
               </div>
 
               <div className="ordercount">
@@ -131,12 +129,12 @@ class GoodsDetail extends Component {
             <ul>
               <li className="price">
                 <span className="pricetext">총 제품 금액</span>
-                <span className="goods_total_price">₩{goods_total_price}</span>
+                {/* <span className="goods_total_price">₩goods_total_price</span> */}
               </li>
 
               <li className="total">
                 <span className="totaltext">총 합계 금액</span>
-                <span className="total_price">₩{total_price}</span>
+                {/* <span className="total_price">₩total_price</span> */}
               </li>
             </ul>
           </div>
@@ -155,7 +153,7 @@ class GoodsDetail extends Component {
             </div>
             <div className="naverbox">
               <div className="naver_N_box">
-                <p className="naver_N">N</p>
+                {/* <p className="naver_N">N</p> */}
               </div>
               <p className="pay_text">Pay 구매</p>
             </div>

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./SignUp.scss";
-
-const SERVER_IP = "http://10.58.2.153:8000";
+import { URL_PATH } from "config.js";
 
 class SignUp extends Component {
   constructor() {
@@ -110,7 +109,7 @@ class SignUp extends Component {
 
   handleButton = () => {
     // post
-    fetch(`${SERVER_IP}/user/signup`, {
+    fetch(`${URL_PATH}user/signup`, {
       // fetch 인자의 첫 번째 인자는 api 주소고, 두 번째 인자는 객체 형태이고
       method: "POST", // 메소드 뒤에 포스트를 스트링으로 적어줘야 하는데, get은 디폴트 값이 원래 있어서 안 써줘도 됨.
       body: JSON.stringify({
@@ -123,8 +122,13 @@ class SignUp extends Component {
         phone_number: this.state.phone_number,
         address: this.state.address,
       }),
-    }).then((res) => res.json());
-    // .then((res) => console.log("res >>> ", res));
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.message === "SUCCESS") {
+          this.props.history.push("/login");
+        }
+      });
   };
 
   render() {
@@ -160,13 +164,11 @@ class SignUp extends Component {
                   />
                 </div>
                 <div className="id_message">
-                  <span
+                  <div
                     className={
                       this.state.user_id.length > 4 ? "id-color" : "id-none"
                     }
-                  >
-                    사용가능한 아이디입니다.
-                  </span>
+                  ></div>
                 </div>
                 <div className="box">
                   <span className="red">■</span>
@@ -199,9 +201,7 @@ class SignUp extends Component {
                         ? "id-color"
                         : "id-color-reds"
                     }
-                  >
-                    비밀번호가 서로 다릅니다.
-                  </span>
+                  ></span>
                 </div>
                 <div className="box">
                   <span className="red">■</span>

@@ -68,23 +68,25 @@
             width: 1000px;
             height: 40px;
             display: flex;
+            margin-bottom: 20px;
             .text {
               font-size: 16px;
               width: 120px;
               height: 40px;
               margin-left: 10px;
             }
-            // .id_message {
-            //   //padding-left: 190px;
-            //   .id-color {
-            //     color: rgb(44, 58, 44);
-            //     // margin-left: 50px;
-            //   }
+            .id_message {
+              // padding-left: 190px;
+              .id-color {
+                color: rgb(44, 58, 44);
+                // margin-left: 50px;
+              }
 
-            //   .id-none {
-            //     display: none;
-            //   }
-            // }
+              .id-none {
+                // display: none;
+                margin-left: 70px;
+              }
+            }
 
             .inputbox {
               border-style: solid;
@@ -99,6 +101,7 @@
             width: 1000px;
             height: 40px;
             display: flex;
+            margin-bottom: 20px;
             .text {
               font-size: 16px;
               width: 120px;

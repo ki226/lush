@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./GoodsReview.scss";
-// import data from "../../../../public/data/detailData.json";
 
 class GoodsReview extends Component {
   state = {};

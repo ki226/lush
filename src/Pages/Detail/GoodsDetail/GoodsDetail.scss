@@ -79,8 +79,8 @@
         width: 100%;
         height: 70%;
 
-        .productname {
-          font-size: 20px;
+        .product_name {
+          font-size: 30px;
           font-style: solid;
           margin-right: auto;
         }
@@ -121,8 +121,8 @@
             font-size: 17px;
           }
           .pricenum {
-            margin-left: 60px;
-            font-size: 25px;
+            margin-left: 45px;
+            font-size: 15px;
           }
         }
         .goodsweight {
@@ -270,20 +270,19 @@
       padding: 5px 10px 2px 30px;
       display: flex;
 
-      .naver_N_box {
-        width: 30px;
-        height: 25px;
-        background-color: white;
-        display: flex;
-        .naver_N {
-          font-size: 25px;
-          font-weight: bolder;
-          color: #00c73c;
-        }
-        .pay_text {
-          font-size: 15px;
-          color: white;
-        }
+      // .naver_N_box {
+      //   width: 30px;
+      //   height: 25px;
+      //   background-color: white;
+      //   display: flex;
+      // .naver_N {
+      //   font-size: 25px;
+      //   font-weight: bolder;
+      //   color: white;
+      // }
+      .pay_text {
+        font-size: 15px;
+        color: white;
       }
     }
     .savebutton {

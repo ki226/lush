@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import icon_id from "./Images/icon_id.png";
 import icon_password from "./Images/icon_password.png";
 import logo_naver_n from "./Images/logo-naver_n.gif";
+import { URL_PATH } from "config.js";
 import "./Login.scss";
 
 class Login extends Component {
@@ -38,7 +39,7 @@ class Login extends Component {
 
   handleButton = () => {
     // post
-    fetch("http://10.58.0.189:8000/user/signin/", {
+    fetch(`${URL_PATH}user/signin`, {
       // fetch 인자의 첫 번째 인자는 api 주소고, 두 번째 인자는 객체 형태이고
       method: "POST", // 메소드 뒤에 포스트를 스트링으로 적어줘야 하는데, get은 디폴트 값이 원래 있어서 안 써줘도 됨.
       body: JSON.stringify({
@@ -46,7 +47,15 @@ class Login extends Component {
         user_id: this.state.user_id,
         password: this.state.password,
       }),
-    }).then((res) => res.json());
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        localStorage.setItem("token", data.Authorization);
+        if (data.message === "LOGIN SUCCESS") {
+          this.props.history.push("/");
+        }
+      });
   };
 
   //state = {};
