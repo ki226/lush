@@ -3,7 +3,6 @@ import "./SearchPop.scss";
 
 class SearchPop extends Component {
   render() {
-    console.log(this.props);
     return (
       <div
         className={`SearchPop ${
@@ -34,7 +33,7 @@ class SearchPop extends Component {
             </ul>
 
             <div className="recent-search">
-              <p>최근</p>
+              <p>최근 검색어</p>
             </div>
           </div>
         </div>
