@@ -5,6 +5,31 @@ import "./MyPage.scss";
 class MyPage extends Component {
   state = {
     menuShow: null,
+    addressInfo: [],
+  };
+
+  addressDataPost = () => {
+    fetch("http://10.58.7.168:8000/mypage/shipping", {
+      method: "POST",
+      body: JSON.stringify({
+        name: this.state.addressName,
+        recipient: this.state.userName,
+        address: this.state.address,
+        phone_number: this.state.mobile,
+      }),
+    }).then(() =>
+      this.setState({
+        menuShow: null,
+      })
+    )(() =>
+      fetch("http://10.58.7.168:8000/mypage/shipping").then(
+        ((res) => res.json()).then((res) =>
+          this.setState({
+            addressInfo: res.shippings,
+          })
+        )
+      )
+    );
   };
 
   showSelectedMenu = (id) => {
@@ -19,11 +44,24 @@ class MyPage extends Component {
     });
   };
 
+  inputHandle = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+
   render() {
     const { menuShow } = this.state;
+    console.log(menuShow);
     return (
       <>
-        <AddAddress menuShow={menuShow} menuHide={this.HideMenu} />
+        <AddAddress
+          inputHandle={this.inputHandle}
+          menuShow={menuShow}
+          menuHide={this.HideMenu}
+          dataPost={this.addressDataPost}
+          addressInfo
+        />
 
         <div className="MyPage">
           <div className="mypage-container">
